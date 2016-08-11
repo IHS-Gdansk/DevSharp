@@ -798,6 +798,7 @@ span.navbar-trigger-close a:hover {
   position: relative;
   display: block;
   overflow: hidden;
+  margin-bottom: 25px;
 }
 #meet-the-team .team-item > .team-element:hover > .team-inner {
   display: block;
@@ -820,6 +821,10 @@ span.navbar-trigger-close a:hover {
   filter: alpha(opacity=80);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
 }
+#meet-the-team .team-item > .team-element > .team-inner:hover {
+    overflow-y: auto;
+   /* margin-right: -20px;*/
+}
 #meet-the-team .team-item > .team-element > .team-inner > .team-detail {
   text-align: center;
   display: table;
@@ -829,7 +834,7 @@ span.navbar-trigger-close a:hover {
 #meet-the-team .team-item > .team-element > .team-inner > .team-detail > .team-content {
   display: table-cell;
   vertical-align: middle;
-  padding: 0 15px;
+  padding: 25px 15px 10px;
   color: #fff;
   letter-spacing: 0.2em;
 }
@@ -851,6 +856,7 @@ span.navbar-trigger-close a:hover {
   transition-property: transform;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  width: 100%;
 }
 #meet-the-team .team-item.not-right-column.top-column {
   margin-bottom: 30px;
@@ -1078,6 +1084,13 @@ footer.footer #footer {
   background-color: #1c1c1c;
   padding-top: 50px;
   padding-bottom: 20px;
+}
+
+footer.footer #footer .mailto {
+  color: #888;
+}
+footer.footer #footer .mailto i {
+  padding-right: 10px
 }
 footer.footer #footer .footer-column.not-right-column {
   margin-bottom: 50px;

@@ -17,3 +17,14 @@
 .email-icon-margin {
     margin-left: 8px;
 }
+::-webkit-scrollbar {
+  width: 9px;
+  background-color: #a1abb2;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #00a8cb;
+  cursor: pointer;
+}
+.timeline-body {
+  display: none; 
+}
