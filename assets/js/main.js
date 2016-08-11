@@ -6,7 +6,7 @@ $(function() {
     $(window).load(function(){
         $('#page-loader').fadeOut('fast');
     });
-    
+  
     
     /*---------------------------------------*/
     /*  JQUERY FOR PAGE SCROLLING FEATURE
@@ -42,7 +42,7 @@ $(function() {
     var stickySideMenu = function(){
         var navbar = $('.navbar.navbar-fixed-top.side-menu');
         
-        if ($(window).width() >= 992) {        
+        if ($(window).width() >= 992) {
             navbar.unstick();
         }
         else
@@ -85,7 +85,14 @@ $(function() {
         singleItem: true
     });
     
-    
+    /*---------------------------------------*/
+    /*  TIMELINE TOGGLE
+    /*---------------------------------------*/
+      $('.timeline-heading').on('click',function(){
+        $(this).siblings('.timeline-body').toggle(300);
+    });
+
+  
     /*---------------------------------------*/
     /*  CONTACT FORM REQUEST
     /*---------------------------------------*/

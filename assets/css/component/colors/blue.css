@@ -300,6 +300,16 @@
     border-right: 0 solid #00a8cb;
     border-left: 14px solid #00a8cb;
   }
+  .timeline > li > .break-after.timeline-panel:after {
+    border-right: 0 solid #a1abb2;
+    border-left: 14px solid #a1abb2;
+  }
+  .timeline > li > .break-before.timeline-panel:after {
+    border-right: 14px solid #a1abb2;
+    border-left: 0 solid #a1abb2;
+    left: -14px;
+    right: auto;
+  }
 }
 .timeline > li > .timeline-panel > .timeline-heading > .timeline-title {
   background: #00a8cb;
