@@ -755,7 +755,7 @@ span.navbar-trigger-close a:hover {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  display: block;
+  display: inline-block;
 }
 #keep-in-touch .social-icon-item > a:hover {
   color: #1abc9c;

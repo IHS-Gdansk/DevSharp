@@ -39,7 +39,7 @@
 </head>
 
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="51">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="51" ng-app="app">
 
     <!--[if lt IE 8]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -828,23 +828,53 @@
                 <!-- //.row -->
 
                 <div class="row">
-                    <div class="col-xs-3 col-sm-4 col-md-5">
+                    <div class="col-xs-3 col-sm-4 col-md-2">
                         <div class="social-icon-item text-center not-right-column">
                         </div>
                         <!-- //.social-icon-item -->
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-2 ">
-                        <div class="email-icon-margin social-icon-item text-center not-right-column top-column">
-                            <a href="mailto:devsharp@ihsmarkit.com?subject=I%20would%20like%20to%20attend%20Dev#%20conference&body=Send%20us%20an%20email%20and%20you%20will%20be%20the%20first%20one%20to%20be%20notified%20and%20invited%20for%20the%20conference!%20Dont%20wait!%20">
+
+                    <div class="col-sm-12 col-md-8  contact-form " ng-controller="contactCtrl">
+                        <div class="email-icon-margin social-icon-item text-center not-right-column top-column" >
+                            <a href="" ng-click="showForm()">
                                 <span class="social-icon">
                                     <i class="fa fa-envelope-o"></i>
                                 </span>
                                 <h4>Send Email</h4>
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
                             </a>
                         </div>
+
+                        <form class="row" ng-show="show_form">
+                            <div class="col-md-6">
+                                <label class="labelAnim" for="name">Name</label>
+                                <input data-ng-model="name" type="text" name="name"  class="input -text inputVal" id="name" ng-minlengtH="3" required autocomplete="off">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="labelAnim" for="surname">Surname</label>
+                                <input data-ng-model="surname" type="text" name="username"  class="inputVal input -text" id="username" ng-minlengtH="3" required autocomplete="off">
+                            </div>
+                            <div class="col-md-12">
+                                <label class="labelAnim" for="pass">Email</label>
+                                <input data-ng-model="email" type="text" name="password" class="inputVal input -text" id="pass" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required autocomplete="off">
+                            </div>
+                            <div class="col-md-12">
+                                <span>Where did you hear about our conference?</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="from_employee" ng-change="radioBehave(1)"> from my ihs employee friend</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="from_university" ng-change="radioBehave(2)"> from university</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="from_fb" ng-change="radioBehave(3)"> from Ad on facebook</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="from_other" ng-change="radioBehave(4)"> other</span>
+                            </div>
+                            <div class="col-md-12" ng-show="from_employee">
+                                <label class="labelAnim" for="ihs_employee">Write her/his name</label>
+                                <input data-ng-model="ihs_employee" type="text" name="ihs_employee"  class="inputVal input -text" id="ihs_employee" ng-minlengtH="3"  autocomplete="off">
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <input type="submit" class="btn-send" value="Send email" ng-click="sendEmail()">
+                            </div>
+                        </form>
                     </div>
-                    
-                    <div class="col-xs-3 col-sm-4 col-md-5">
+                    <div class="col-xs-3 col-sm-4 col-md-2">
                         <div class="social-icon-item text-center not-right-column">
                         </div>
                         <!-- //.social-icon-item -->
@@ -987,6 +1017,7 @@
     <script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
     <script src="assets/plugins/jquery-magnificPopup/jquery.magnific-popup.min.js"></script> 
     <script src="assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="assets/plugins/AngularJS/angular.min.js"></script>
     
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
