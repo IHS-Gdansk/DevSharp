@@ -755,7 +755,7 @@ span.navbar-trigger-close a:hover {
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  display: block;
+  display: inline-block;
 }
 #keep-in-touch .social-icon-item > a:hover {
   color: #1abc9c;
@@ -1025,7 +1025,99 @@ span.navbar-trigger-close a:hover {
 #contact-us > .section-inner .section-content .social-icon-text > ul.social-icon-list > li a:hover {
   border-color: #ffffff;
 }
+/* CONTACT-FORM */
+.contact-form {
+  color: #b7ada4;
+  text-transform: uppercase;
+}
 
+.contact-form .fa-angle-down {
+  font-size: 60px;
+}
+
+.contact-form h3 {
+  text-align: center;
+}
+
+.contact-form .form-message h4 {
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+}
+
+.contact-form form div input[type='text'] {
+  width: 100%;
+  padding: 6px;
+  color: #b7ada4;
+  background-color: transparent;
+  z-index: 2;
+  position: relative;
+  outline-color: transparent;
+}
+
+.contact-form form div {
+  margin: 25px 0;
+}
+
+.contact-form form div label {
+  position: absolute;
+  bottom: 5px;
+  z-index: 1;
+}
+
+.contact-form form div span {
+  display: block;
+  padding: 5px 0;
+}
+
+.contact-form form div span:first-of-type{
+  font-size: 20px;
+}
+
+.inputVal.ng-valid {
+  border: 0;
+  border-bottom: 4px solid #228B22;
+  transition: all .5s ease-in;
+}
+
+.inputVal.ng-invalid {
+  border: 0;
+  border-bottom: 4px solid #ed1c24;
+  transition: all .5s ease-in;
+}
+
+.contact-form form div input[type='submit']{
+  background-color: #00a8cb;
+  border: 0;
+  padding: 10px 15px;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all .3s ease-in;
+}
+
+.contact-form form div input[type='submit']:hover {
+  opacity: .7;
+  transition: all .3s ease-out;
+  color: #000;
+}
+
+.contact-form form div input[type='checkbox']{
+  margin: 4px 0;
+  vertical-align: bottom
+}
+
+.-success {
+  border: 3px solid #228B22;
+}
+
+.-fail {
+  border: 3px solid #ed1c24;
+}
+
+.onFocus {
+  transition: all .5s ease;
+  bottom: 25px !important;
+}
 
 /*---------------------------------------------------------------------*/
 /*  15. MAP

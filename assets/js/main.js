@@ -93,39 +93,83 @@ $(function() {
     });
 
   
+  
     /*---------------------------------------*/
-    /*  CONTACT FORM REQUEST
+    /*  ANIMATION CONTACT FORM
     /*---------------------------------------*/
-    $('.validate').validate();
-    
-    $(document).on('submit', '#contact-us-form', function(e){
-        e.preventDefault();
-        
-        $('.form-respond').html("<div class='content-message'><i class='fa fa-refresh fa-spin fa-4x'></i> <h2>Loading..</h2></div>");
-        
-        $.ajax({
-            url: $('#contact-us-form').attr('action'),
-            type: 'post',
-            dataType: 'json',
-            data: $(this).serialize(),
-            success: function(data){
-                if (data == true){
-                    $('.form-respond').html("<div class='content-message'><i class='fa fa-rocket fa-4x'></i> <h2>Email Sent Successfully</h2> <p>Your message has been submitted.</p></div>");
-                } else {
-                    $('.form-respond').html("<div class='content-message'><i class='fa fa-exclamation-circle fa-4x'></i> <h2>Error sending</h2> <p>Try again later.</p></div>");
-                }
-                
-                setTimeout(function(){
-                    $('.form-respond').html("");
-                },3000);
-            },
-            error: function(xhr, err){
-                $('.form-respond').html("<div class='content-message'><i class='fa fa-exclamation-circle fa-4x'></i> <h2>Error sending</h2> <p>Try again later.</p></div>");
-                
-                setTimeout(function(){
-                    $('.form-respond').html("");
-                },3000);
-            }
-        });
-    });
+      $(".input.-text").on( 'focus', function(){
+        $(this).siblings('.labelAnim').addClass('onFocus');
+      });
+      
+      $(".input.-text").on( 'blur', function(){
+        if($(this).val() === '') {
+          $(this).siblings('.labelAnim').removeClass('onFocus');
+        }
+      });
+  
+  
 });
+
+    /*---------------------------------------*/
+    /*  CONTACT FORM
+    /*---------------------------------------*/
+var app = angular.module("app",[]);
+app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
+    $('.contact-form .form-message').css('display', 'none');
+    $scope.show_form = false;
+  
+    $scope.showForm = function(){
+        $scope.show_form = $scope.show_form ? false : true;
+        $scope.show_form ? $("body").animate({ scrollTop: window.pageYOffset + 350 }, 500) : $("body").animate({ scrollTop: window.pageYOffset  - 350 }, 500);
+    }
+    
+    $scope.radioBehave = function(n){
+
+        $scope.from_employee = false;
+        $scope.from_university = false;
+        $scope.from_fb = false;
+        $scope.from_other = false;
+
+        switch(n) {
+            case 1: $scope.from_employee = true; break;
+            case 2: $scope.from_university = true; break;
+            case 3: $scope.from_fb = true; break;
+            case 4: $scope.from_other = true; break;
+        }
+    }
+    
+    $scope.sendEmail = function(){
+      
+        $scope.from_name = $scope.name + " "  + $scope.surname;
+        $scope.message_html = "Name :<b>" + $scope.from_name + "</b><br>" 
+                            + "email : <b>" + $scope.email + '</b><br>';
+
+        if($scope.from_employee) { 
+            $scope.message_html+= "my IHS employee friend name is: <b>" + $scope.ihs_employee + "</b>";
+        }
+
+        emailjs.send("mailgun","template_mJReVbEI",{from_name: $scope.from_name , message_html: $scope.message_html})
+            .then(function(response) {
+
+                $('.inputVal').val('');
+                $('.inputVal').removeClass('ng-valid');
+                $('.inputVal').addClass('ng-invalid');
+                $('.contact-form form div label').removeClass('onFocus');
+                $('.contact-form .form-message').css('display', 'block');
+                $('.contact-form .form-message').addClass('-success')
+                $('.contact-form .form-message h4').text('Success');
+
+                setTimeout(function(){
+                    $('.contact-form .form-message').css('display', 'none');
+                },5000);
+
+            }, function(err) {
+                $('.contact-form .form-message').css('display', 'block');
+                $('.contact-form .form-message h4').text('Fail');
+                setTimeout(function(){
+                    $('.contact-form .form-message').css('display', 'none');
+                },5000);
+            }
+        );
+    };
+}]);
