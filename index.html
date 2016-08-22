@@ -846,7 +846,7 @@
                             </a>
                         </div>
 
-                        <div class="form-message" >
+                        <div class="form-message" style="display:none" >
                           <h4></h4>
                         </div>
                                    
@@ -872,7 +872,7 @@
                             </div>
                             <div class="col-md-12" ng-show="from_employee">
                                 <label class="labelAnim" for="ihs_employee">Write her/his name</label>
-                                <input data-ng-model="ihs_employee" type="text" name="ihs_employee"  class="inputVal input -text" id="ihs_employee" autocomplete="off">
+                                <input data-ng-model="ihs_employee" type="text" name="ihs_employee"  class="inputVal input -text" id="ihs_employee" ng-minlengtH="3" autocomplete="off" >
                             </div>
                             <div class="col-md-12 text-center">
                                 <input type="submit" class="btn-send" value="Send email" >

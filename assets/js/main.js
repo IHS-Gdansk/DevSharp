@@ -115,7 +115,7 @@ $(function() {
     /*---------------------------------------*/
 var app = angular.module("app",[]);
 app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
-    $('.contact-form .form-message').css('display', 'none');
+
     $scope.show_form = false;
   
     $scope.showForm = function(){
@@ -157,7 +157,7 @@ app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
                 $('.contact-form form div label').removeClass('onFocus');
                 $('.contact-form .form-message').css('display', 'block');
                 $('.contact-form .form-message').addClass('-success')
-                $('.contact-form .form-message h4').text('Success');
+                $('.contact-form .form-message h4').text('Your mail was delivered');
 
                 setTimeout(function(){
                     $('.contact-form .form-message').css('display', 'none');
@@ -165,7 +165,7 @@ app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
 
             }, function(err) {
                 $('.contact-form .form-message').css('display', 'block');
-                $('.contact-form .form-message h4').text('Fail');
+                $('.contact-form .form-message h4').text('Error! Try to send mail again ');
                 setTimeout(function(){
                     $('.contact-form .form-message').css('display', 'none');
                 },5000);
