@@ -773,17 +773,13 @@ span.navbar-trigger-close a:hover {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-#keep-in-touch .social-icon-item.not-right-column.top-column {
-  margin-bottom: 50px;
-}
+
 @media (min-width: 1024px) {
   #keep-in-touch .social-icon-item.not-right-column.top-column {
     margin-bottom: 0px;
   }
 }
-#keep-in-touch .social-icon-item.not-right-column {
-  margin-bottom: 50px;
-}
+
 @media (min-width: 768px) {
   #keep-in-touch .social-icon-item.not-right-column {
     margin-bottom: 0px;
@@ -1074,13 +1070,19 @@ span.navbar-trigger-close a:hover {
   font-size: 20px;
 }
 
+.inputVal.ng-invalid {
+  border: 0;
+  border-bottom: 4px solid #ed1c24;
+  transition: all .5s ease-in;
+}
+
 .inputVal.ng-valid {
   border: 0;
   border-bottom: 4px solid #228B22;
   transition: all .5s ease-in;
 }
 
-.inputVal.ng-invalid {
+.inputVal.ng-pristine {
   border: 0;
   border-bottom: 4px solid #ed1c24;
   transition: all .5s ease-in;
@@ -1107,11 +1109,17 @@ span.navbar-trigger-close a:hover {
 }
 
 .-success {
-  border: 3px solid #228B22;
+    border: 3px solid #228B22;
+    border-radius: 20px;
+    padding-left: 20px;
+    color: #228B22;
 }
 
 .-fail {
   border: 3px solid #ed1c24;
+  border-radius: 20px;
+  padding-left: 20px;
+  color: #ed1c24;
 }
 
 .onFocus {
