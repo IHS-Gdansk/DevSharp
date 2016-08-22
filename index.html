@@ -828,13 +828,14 @@
                 <!-- //.row -->
 
                 <div class="row">
-                    <div class="col-xs-3 col-sm-4 col-md-2">
+                    <div class="col-xs-12 col-sm-4 col-md-2">
                         <div class="social-icon-item text-center not-right-column">
                         </div>
                         <!-- //.social-icon-item -->
                     </div>
 
                     <div class="col-sm-12 col-md-8  contact-form " ng-controller="contactCtrl">
+                       
                         <div class="email-icon-margin social-icon-item text-center not-right-column top-column" >
                             <a href="" ng-click="showForm()">
                                 <span class="social-icon">
@@ -845,32 +846,36 @@
                             </a>
                         </div>
 
-                        <form class="row" ng-show="show_form">
-                            <div class="col-md-6">
+                        <div class="form-message" >
+                          <h4></h4>
+                        </div>
+                                   
+                        <form class="row" ng-show="show_form" ng-submit="sendEmail()">
+                            <div class="col-sm-12 col-md-6">
                                 <label class="labelAnim" for="name">Name</label>
-                                <input data-ng-model="name" type="text" name="name"  class="input -text inputVal" id="name" ng-minlengtH="3" required autocomplete="off">
+                                <input data-ng-model="name" type="text" name="name"  class="inputVal input -text" id="name" ng-minlengtH="3" required autocomplete="off">
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-sm-12 col-md-6">
                                 <label class="labelAnim" for="surname">Surname</label>
                                 <input data-ng-model="surname" type="text" name="username"  class="inputVal input -text" id="username" ng-minlengtH="3" required autocomplete="off">
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-sm-12 col-md-12">
                                 <label class="labelAnim" for="pass">Email</label>
                                 <input data-ng-model="email" type="text" name="password" class="inputVal input -text" id="pass" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required autocomplete="off">
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-sm-12 col-md-12">
                                 <span>Where did you hear about our conference?</span>
                                 <span><input name="contactForm" type="checkbox" ng-model="from_employee" ng-change="radioBehave(1)"> from my ihs employee friend</span>
                                 <span><input name="contactForm" type="checkbox" ng-model="from_university" ng-change="radioBehave(2)"> from university</span>
                                 <span><input name="contactForm" type="checkbox" ng-model="from_fb" ng-change="radioBehave(3)"> from Ad on facebook</span>
-                                <span><input name="contactForm" type="checkbox" ng-model="from_other" ng-change="radioBehave(4)"> other</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="from_other" ng-change="radioBehave(4)" selected> other</span>
                             </div>
                             <div class="col-md-12" ng-show="from_employee">
                                 <label class="labelAnim" for="ihs_employee">Write her/his name</label>
-                                <input data-ng-model="ihs_employee" type="text" name="ihs_employee"  class="inputVal input -text" id="ihs_employee" ng-minlengtH="3"  autocomplete="off">
+                                <input data-ng-model="ihs_employee" type="text" name="ihs_employee"  class="inputVal input -text" id="ihs_employee" autocomplete="off">
                             </div>
                             <div class="col-md-12 text-center">
-                                <input type="submit" class="btn-send" value="Send email" ng-click="sendEmail()">
+                                <input type="submit" class="btn-send" value="Send email" >
                             </div>
                         </form>
                     </div>
@@ -1000,7 +1005,6 @@
     </footer>
     <!-- //End Footer -->
 
-    
     <!-- Plugins JS -->
     <script src="assets/plugins/jquery.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -1036,6 +1040,13 @@
     <!-- Map JS -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="assets/js/component/map.js"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_uC9fsX76W33xqmOpjdXEc");
+       })();
+    </script>
 
 </body>
 

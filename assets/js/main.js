@@ -115,8 +115,9 @@ $(function() {
     /*---------------------------------------*/
 var app = angular.module("app",[]);
 app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
-  
+    $('.contact-form .form-message').css('display', 'none');
     $scope.show_form = false;
+  
     $scope.showForm = function(){
         $scope.show_form = $scope.show_form ? false : true;
         $scope.show_form ? $("body").animate({ scrollTop: window.pageYOffset + 350 }, 500) : $("body").animate({ scrollTop: window.pageYOffset  - 350 }, 500);
@@ -138,41 +139,37 @@ app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
     }
     
     $scope.sendEmail = function(){
-        $scope.ihs_employee === undefined ? $scope.ihs_employee = " ": $scope.ihs_employee = $scope.ihs_employee;
-        var data = {
-          from: $scope.name + ' ' + $scope.surname +  ' ' + '<' + $scope.email + '>',
-          to: 'devsharp2016@gmail.com',
-          subject: 'Devsharp Conference',
-          text: 'Testing some Mailgun awesomness!',
-          h:'h:X-My-Header',
-          html :'<b>Mailgun rocks</b>',
-          inline:'@files/awesome.gif' ,
-          'o:campaign':'some_campaign_id',
-          'o:deliverytime':'Thu, 12 April 2018 15:11:30 GMT',
-          'o:dkim':'yes',
-          'o:tag':'newsletter',
-          'v:':'v:my-var'
-        };
-        $http({
-           method: 'POST',
-           url: 'https://mailgun.p.mashape.com/devsharp.azurewebsites.net/messages',
-           headers: {
-              'Authorization': 'Basic ZGV2c2hhcnAyMDE2OmRldnNoYXJwMjAxNg==',
-              'X-Mashape-Key': 'i2sDGutXozmshI4D4dIWX7GYFDbWp1oMOENjsnZe1zf9qOQNeA',
-              'Content-Type': 'application/x-www-form-urlencoded',
-              'Accept': 'text/plain',
-           },
-          data: data
+      
+        $scope.from_name = $scope.name + " "  + $scope.surname;
+        $scope.message_html = "Name :<b>" + $scope.from_name + "</b><br>" 
+                            + "email : <b>" + $scope.email + '</b><br>';
 
-        }).then(function successCallback(response) {
-            console.log(response);
-        }, function errorCallback(response) {
-            console.log(response);
-        });
-      
-      
+        if($scope.from_employee) { 
+            $scope.message_html+= "my IHS employee friend name is: <b>" + $scope.ihs_employee + "</b>";
+        }
+
+        emailjs.send("mailgun","template_mJReVbEI",{from_name: $scope.from_name , message_html: $scope.message_html})
+            .then(function(response) {
+
+                $('.inputVal').val('');
+                $('.inputVal').removeClass('ng-valid');
+                $('.inputVal').addClass('ng-invalid');
+                $('.contact-form form div label').removeClass('onFocus');
+                $('.contact-form .form-message').css('display', 'block');
+                $('.contact-form .form-message').addClass('-success')
+                $('.contact-form .form-message h4').text('Success');
+
+                setTimeout(function(){
+                    $('.contact-form .form-message').css('display', 'none');
+                },5000);
+
+            }, function(err) {
+                $('.contact-form .form-message').css('display', 'block');
+                $('.contact-form .form-message h4').text('Fail');
+                setTimeout(function(){
+                    $('.contact-form .form-message').css('display', 'none');
+                },5000);
+            }
+        );
     };
-  
-  
-  
 }]);
