@@ -123,7 +123,7 @@ app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
         $scope.show_form ? $("body").animate({ scrollTop: window.pageYOffset + 350 }, 500) : $("body").animate({ scrollTop: window.pageYOffset  - 350 }, 500);
     }
     
-    $scope.radioBehave = function(n){
+    $scope.radioBehaveFrom = function(n){
 
         $scope.from_employee = false;
         $scope.from_university = false;
@@ -135,6 +135,34 @@ app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
             case 2: $scope.from_university = true; break;
             case 3: $scope.from_fb = true; break;
             case 4: $scope.from_other = true; break;
+        }
+    }
+	
+	$scope.radioBehaveJob = function(n){
+
+        $scope.job_soft = false;
+        $scope.job_student = false;
+        $scope.job_sqa = false;
+        $scope.job_other = false;
+
+        switch(n) {
+            case 1: $scope.job_soft = true; break;
+            case 2: $scope.job_student = true; break;
+            case 3: $scope.job_sqa = true; break;
+            case 4: $scope.job_other = true; break;
+        }
+    }
+	
+	$scope.radioBehaveMeal = function(n){
+
+        $scope.meal_preferences_no = false;
+        $scope.meal_preferences_vegetarian = false;
+        $scope.meal_preferences_other = false;
+
+        switch(n) {
+            case 1: $scope.meal_preferences_no = true; break;
+            case 2: $scope.meal_preferences_vegetarian = true; break;
+            case 3: $scope.meal_preferences_other = true; break;
         }
     }
     

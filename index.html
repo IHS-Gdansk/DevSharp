@@ -120,6 +120,10 @@
                     <li class="page-scroll">
                         <a href="#our-history">Agenda</a>
                     </li>
+					
+					<li class="page-scroll">
+                        <a href="#keep-in-touch">Registration</a>
+                    </li>
                                         
                     <li class="page-scroll">
                         <a href="#footer">Contact</a>
@@ -865,14 +869,47 @@
                             </div>
                             <div class="col-sm-12 col-md-12">
                                 <span>Where did you hear about our conference?</span>
-                                <span><input name="contactForm" type="checkbox" ng-model="from_employee" ng-change="radioBehave(1)"> from my ihs employee friend</span>
-                                <span><input name="contactForm" type="checkbox" ng-model="from_university" ng-change="radioBehave(2)"> from university</span>
-                                <span><input name="contactForm" type="checkbox" ng-model="from_fb" ng-change="radioBehave(3)"> from Ad on facebook</span>
-                                <span><input name="contactForm" type="checkbox" ng-model="from_other" ng-change="radioBehave(4)" selected> other</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="from_employee" ng-change="radioBehaveFrom(1)"> from my ihs employee friend</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="from_university" ng-change="radioBehaveFrom(2)"> from university</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="from_fb" ng-change="radioBehaveFrom(3)"> from Ad on facebook</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="from_other" ng-change="radioBehaveFrom(4)" selected> other</span>
                             </div>
                             <div class="col-md-12" ng-show="from_employee">
                                 <label class="labelAnim" for="ihs_employee">Write her/his name</label>
                                 <input data-ng-model="ihs_employee" type="text" name="ihs_employee"  class="inputVal input -text" id="ihs_employee" ng-minlengtH="3" autocomplete="off" >
+                            </div>
+							<div class="col-md-12" ng-show="from_other">
+                                <label class="labelAnim" for="from_other_text">Other</label>
+                                <input data-ng-model="from_other_text" type="text" name="from_other_text" class="inputVal input -text" id="from_other_text" ng-minlengtH="3" autocomplete="off" >
+                            </div>
+							<div class="col-sm-12 col-md-12">
+                                <span>Your Occupation / Job</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="job_soft" ng-change="radioBehaveJob(1)"> Software Developer</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="job_student" ng-change="radioBehaveJob(2)"> Student</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="job_sqa" ng-change="radioBehaveJob(3)"> SQA Engineer</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="job_other" ng-change="radioBehaveJob(4)" selected> other</span>
+                            </div>
+                            <div class="col-md-12" ng-show="job_other">
+                                <label class="labelAnim" for="job_other_text">Other</label>
+                                <input data-ng-model="job_other_text" type="text" name="job_other_text" class="inputVal input -text" id="job_other_text" ng-minlengtH="3" autocomplete="off" >
+                            </div>
+							<div class="col-md-12">
+                                <label class="labelAnim" for="company">Your Company / Organization / School</label>
+                                <input data-ng-model="company" type="text" name="company" class="inputVal input -text" id="company" ng-minlengtH="3" autocomplete="off" >
+                            </div>
+							<div class="col-md-12">
+                                <label class="labelAnim" for="about_you">Area of interest / something about you</label>
+                                <input data-ng-model="about_you" type="text" name="about_you" class="inputVal input -text" id="about_you" ng-minlengtH="3" autocomplete="off" >
+                            </div>
+							<div class="col-sm-12 col-md-12">
+                                <span>Special Meal Preferences</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="meal_preferences_no" ng-change="radioBehaveMeal(1)" selected> No</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="meal_preferences_vegetarian" ng-change="radioBehaveMeal(2)"> Yes, Vegetarian</span>
+                                <span><input name="contactForm" type="checkbox" ng-model="meal_preferences_other" ng-change="radioBehaveMeal(3)"> Yes, Other</span>
+                            </div>
+                            <div class="col-md-12" ng-show="meal_preferences_other">
+                                <label class="labelAnim" for="meal_other">Other</label>
+                                <input data-ng-model="meal_other" type="text" name="meal_other" class="inputVal input -text" id="meal_other" ng-minlengtH="3" autocomplete="off" >
                             </div>
                             <div class="col-md-12 text-center">
                                 <input type="submit" class="btn-send" value="Send email" >
