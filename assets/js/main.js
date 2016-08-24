@@ -116,60 +116,149 @@ $(function() {
 var app = angular.module("app",[]);
 app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
 
+    var ip =0;
+    $.getJSON('//ipinfo.io/', function(data) {
+        ip = data.ip;
+    });
+    var today = new Date();
+    var str = today.toGMTString();
     $scope.show_form = false;
-  
+    $scope.about_conference ,$scope.your_occupation, $scope.my_company,  $scope.about_me, $scope.special_preferences;
+
     $scope.showForm = function(){
         $scope.show_form = $scope.show_form ? false : true;
         $scope.show_form ? $("body").animate({ scrollTop: window.pageYOffset + 350 }, 500) : $("body").animate({ scrollTop: window.pageYOffset  - 350 }, 500);
     }
     
-    $scope.radioBehave = function(n){
-
+    $scope.hearAbout = function(n){
         $scope.from_employee = false;
-        $scope.from_university = false;
         $scope.from_fb = false;
         $scope.from_other = false;
 
         switch(n) {
-            case 1: $scope.from_employee = true; break;
-            case 2: $scope.from_university = true; break;
-            case 3: $scope.from_fb = true; break;
-            case 4: $scope.from_other = true; break;
+            case 1:
+                $scope.from_employee = true; 
+                $scope.about_conference = $scope.ihs_employee;
+            break;
+            case 2:
+                $scope.from_fb = true;
+                $scope.about_conference = "Facebook";
+            break;
+            case 3:
+                $scope.from_other = true; 
+                $scope.about_conference = $scope.about_other;
+            break;
+        }
+    }
+    
+    $scope.occupation = function(n, data){
+        $scope.software_developer = false;
+        $scope.student = false;
+        $scope.sqa_engineer = false;
+        $scope.occupation_other = false;
+
+        switch(n) {
+            case 1: 
+                $scope.software_developer= true; 
+                $scope.your_occupation = data;
+            break;
+            case 2: 
+                $scope.student = true;
+                $scope.your_occupation = data;
+                break;
+            case 3: 
+                $scope.sqa_engineer = true; 
+                $scope.your_occupation = data;
+            break;
+           case 4: 
+                $scope.occupation_other = true; 
+                $scope.your_occupation = $scope.occu_other;
+           break;
+        }
+    }
+    
+    $scope.specialPreferences = function(n, data){
+        $scope.eat_normal = false;
+        $scope.eat_vege = false;
+        $scope.eat_other = false;
+
+        switch(n) {
+            case 1: 
+                $scope.eat_normal = true;
+                $scope.special_preferences = data;
+            break;
+            case 2: 
+                $scope.eat_vege = true;
+                $scope.special_preferences = data;
+                break;
+            case 3: 
+                $scope.eat_other = true;
+                $scope.special_preferences = $scope.pref_other;
+            break;
         }
     }
     
     $scope.sendEmail = function(){
-      
-        $scope.from_name = $scope.name + " "  + $scope.surname;
-        $scope.message_html = "Name :<b>" + $scope.from_name + "</b><br>" 
-                            + "email : <b>" + $scope.email + '</b><br>';
+        
+        var data = {
+            name: $scope.name,
+            surname: $scope.surname,
+            email: $scope.email,
+            about_conference: $scope.about_conference,
+            your_occupation: $scope.your_occupation,
+            my_company : $scope.my_company,
+            about_me : $scope.about_me,
+            special_preferences: $scope.special_preferences,
+            ip: ip,
+            date: str
+        };
 
-        if($scope.from_employee) { 
-            $scope.message_html+= "my IHS employee friend name is: <b>" + $scope.ihs_employee + "</b>";
-        }
+        $http({
+            method: 'POST',
+            url: '/',
+            data: JSON.stringify(data)
+        }).then(function successCallback(response) {
+            $scope.message = "Your mail was delivered";
+            $scope.success_msg = true;
+            $scope.fail_msg = false;
+            clearData();
+            $("body").animate({ scrollTop: window.pageYOffset  - 450 }, 500)
+        }, function errorCallback(response) {
+            $scope.message = "Error! Try to send mail again";
+            $scope.success_msg = false;
+            $scope.fail_msg = true;
+            clearData();
+            $("body").animate({ scrollTop: window.pageYOffset  - 450 }, 500)
+        });
 
-        emailjs.send("mailgun","template_mJReVbEI",{from_name: $scope.from_name , message_html: $scope.message_html})
-            .then(function(response) {
-
-                $('.inputVal').val('');
-                $('.inputVal').removeClass('ng-valid');
-                $('.inputVal').addClass('ng-invalid');
-                $('.contact-form form div label').removeClass('onFocus');
-                $('.contact-form .form-message').css('display', 'block');
-                $('.contact-form .form-message').addClass('-success')
-                $('.contact-form .form-message h4').text('Your mail was delivered');
-
-                setTimeout(function(){
-                    $('.contact-form .form-message').css('display', 'none');
-                },5000);
-
-            }, function(err) {
-                $('.contact-form .form-message').css('display', 'block');
-                $('.contact-form .form-message h4').text('Error! Try to send mail again ');
-                setTimeout(function(){
-                    $('.contact-form .form-message').css('display', 'none');
-                },5000);
-            }
-        );
-    };
+        $scope.form_message = true;
+        
+    }
+     
+    var clearData = function() {
+        $scope.name = '';
+        $scope.surname = '';
+        $scope.email = '';
+        $scope.about_conference = '';
+        $scope.your_occupation = '';
+        $scope.my_company='';
+        $scope.about_me='';
+        $scope.special_preferences = '';
+        $scope.ihs_employee= '';
+        $scope.about_other = '';
+        $scope.occu_other = '';
+        $scope.pref_other= '';
+        $scope.from_employee = false;
+        $scope.from_fb = false;
+        $scope.from_other = false;
+        $scope.software_developer = false;
+        $scope.student = false;
+        $scope.sqa_engineer = false;
+        $scope.occupation_other = false;
+        $scope.eat_normal = false;
+        $scope.eat_vege = false;
+        $scope.eat_other = false;
+     }
+     
+     
 }]);
