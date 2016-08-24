@@ -200,23 +200,23 @@ app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
 	
 	var onSuccess = function(data)
 	{
-		if(data === false)
+		if(data.data === false)
 		{
-			onError(data);
+			return onError(data);
 		}
-		$scope.message = "Your mail was delivered";
+		$scope.message = "Your form has been delivered";
 		$scope.success_msg = true;
 		$scope.fail_msg = false;
 		clearData();
+		$scope.show_form = false;
 		$("body").animate({ scrollTop: window.pageYOffset  - 450 }, 500);
 	};
 	
 	var onError = function(data)
 	{
-		$scope.message = "Error! Try to send mail again";
+		$scope.message = "Error! You form has not been delivered, please try again";
 		$scope.success_msg = false;
 		$scope.fail_msg = true;
-		clearData();
 		$("body").animate({ scrollTop: window.pageYOffset  - 450 }, 500);
 	};
     
