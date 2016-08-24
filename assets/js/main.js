@@ -209,7 +209,7 @@ app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
 		$scope.fail_msg = false;
 		clearData();
 		$scope.show_form = false;
-		$("body").animate({ scrollTop: window.pageYOffset  - 450 }, 500);
+		window.location.hash = "#keep-in-touch";
 	};
 	
 	var onError = function(data)
@@ -217,7 +217,7 @@ app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
 		$scope.message = "Error! You form has not been delivered, please try again";
 		$scope.success_msg = false;
 		$scope.fail_msg = true;
-		$("body").animate({ scrollTop: window.pageYOffset  - 450 }, 500);
+		window.location.hash = "#keep-in-touch";
 	};
     
     $scope.sendEmail = function(){
@@ -234,7 +234,6 @@ app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
             IpAddress: ip,
             GMTTime: str
         };
-
         $http({
             method: 'POST',
             url: 'http://devsharptest.azurewebsites.net/send',

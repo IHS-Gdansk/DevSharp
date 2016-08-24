@@ -1108,6 +1108,13 @@ span.navbar-trigger-close a:hover {
   vertical-align: bottom
 }
 
+.contact-form form div textarea{
+  width: 100%;
+  min-height: 120px;
+  background-color: rgba(192,192,192,0.2);
+  outline-color: transparent;
+}
+
 .-success {
     border: 3px solid #228B22;
     border-radius: 20px;
