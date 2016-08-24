@@ -197,39 +197,49 @@ app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
             break;
         }
     }
+	
+	var onSuccess = function(data)
+	{
+		if(data === false)
+		{
+			onError(data);
+		}
+		$scope.message = "Your mail was delivered";
+		$scope.success_msg = true;
+		$scope.fail_msg = false;
+		clearData();
+		$("body").animate({ scrollTop: window.pageYOffset  - 450 }, 500);
+	};
+	
+	var onError = function(data)
+	{
+		$scope.message = "Error! Try to send mail again";
+		$scope.success_msg = false;
+		$scope.fail_msg = true;
+		clearData();
+		$("body").animate({ scrollTop: window.pageYOffset  - 450 }, 500);
+	};
     
     $scope.sendEmail = function(){
         
         var data = {
-            name: $scope.name,
-            surname: $scope.surname,
-            email: $scope.email,
-            about_conference: $scope.about_conference,
-            your_occupation: $scope.your_occupation,
-            my_company : $scope.my_company,
-            about_me : $scope.about_me,
-            special_preferences: $scope.special_preferences,
-            ip: ip,
-            date: str
+            Name: $scope.name,
+            Surname: $scope.surname,
+            Email: $scope.email,
+            HearAboutConf: $scope.about_conference,
+            Job: $scope.your_occupation,
+            Company : $scope.my_company,
+            About : $scope.about_me,
+            SpecialMealPreferences: $scope.special_preferences,
+            IpAddress: ip,
+            GMTTime: str
         };
 
         $http({
             method: 'POST',
-            url: '/',
+            url: 'http://devsharptest.azurewebsites.net/send',
             data: JSON.stringify(data)
-        }).then(function successCallback(response) {
-            $scope.message = "Your mail was delivered";
-            $scope.success_msg = true;
-            $scope.fail_msg = false;
-            clearData();
-            $("body").animate({ scrollTop: window.pageYOffset  - 450 }, 500)
-        }, function errorCallback(response) {
-            $scope.message = "Error! Try to send mail again";
-            $scope.success_msg = false;
-            $scope.fail_msg = true;
-            clearData();
-            $("body").animate({ scrollTop: window.pageYOffset  - 450 }, 500)
-        });
+        }).then(onSuccess, onError);
 
         $scope.form_message = true;
         
