@@ -236,7 +236,7 @@ app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
         };
         $http({
             method: 'POST',
-            url: 'http://devsharptest.azurewebsites.net/send',
+            url: 'http://devsharpservice.azurewebsites.net/send',
             data: JSON.stringify(data)
         }).then(onSuccess, onError);
 
