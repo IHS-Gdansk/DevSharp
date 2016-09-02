@@ -1544,6 +1544,114 @@
   border: none;
 }
 
+/*---------------------------------------------------------------------*/
+/*  FOUNDED BY.
+/*---------------------------------------------------------------------*/
+.founded-by {
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+.founded-by .video-section video {
+    top: -320px;
+    z-index: -100;
+    width: 100%;
+    position: absolute;
+    min-height: 800px;
+}
+.founded-by .video-section img {
+    z-index: -100;
+    width: 100%;
+    min-height: 800px;
+    display: none;
+}
+.founded-by .shadow-black {
+    position: absolute;
+    z-index: 10;
+    background-color: #000;
+    height: 500px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: .5;
+}
+.founded-by .founded-content {
+    position: absolute;
+    z-index: 11;
+    height: 500px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    padding: 100px 0;
+    text-align: center;
+    color: #c9c9c9;
+}
+.founded-by .founded-content img {
+    width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+.founded-by .founded-content .founded-gdansk-link {
+    display: inline-block;
+    font-size: 34px;
+}
+.founded-by .founded-content .founded-gdansk-link:hover {
+    color: #c9c9c9;
+}
+
+@media (min-width: 2000px) {
+    .founded-by .video-section video {
+        display: none;
+    }
+    .founded-by .founded-content {
+        display: block;
+        position: relative;
+        padding: 100px;
+        height: auto;
+        background-image: url(/assets/img/founded-by.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .founded-by .shadow-black {
+        display: none;
+    }
+    .founded-by {
+       height: auto;
+    }
+    .founded-by .founded-content img {
+        width: 480px;
+    }
+    .founded-by .founded-content .founded-gdansk-link {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 1460px) {
+    .founded-by .video-section video {
+        display: none;
+    }
+    .founded-by .founded-content {
+        display: block;
+        position: relative;
+        padding: 50px;
+        height: auto;
+        background-image: url(/assets/img/founded-by.png);
+    }
+    .founded-by .shadow-black {
+        display: none;
+    }
+    .founded-by {
+       height: auto;
+    }
+    .founded-by .founded-content img {
+        width: 380px;
+    }
+    .founded-by .founded-content .founded-gdansk-link {
+        font-size: 22px;
+        color: #fff;
+    }
+}
 
 /*---------------------------------------------------------------------*/
 /*  12. TABULAR CONTENT
