@@ -1545,27 +1545,52 @@
 }
 
 /*---------------------------------------------------------------------*/
-/*  FOUNDED BY.
+/*  FUNDED BY.
 /*---------------------------------------------------------------------*/
-.founded-by {
+.funded-by-header {
+  line-height: 60px;
+  display: inline;
+}
+
+.funded-by-header span {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.funded-by-header img {
+  width: 100px;
+  display: inline;
+}
+
+.funded-main-page span {
+  font-size: 30px;
+}
+.funded-main-page a img {
+  width: 240px;
+  display: block;
+  margin: 0 auto;
+}
+.funded-by {
     position: relative;
     height: 500px;
     width: 100%;
 }
-.founded-by .video-section video {
+.funded-by .video-section video {
     top: -320px;
     z-index: -100;
     width: 100%;
     position: absolute;
     min-height: 800px;
 }
-.founded-by .video-section img {
+.funded-by .video-section img {
     z-index: -100;
     width: 100%;
     min-height: 800px;
     display: none;
 }
-.founded-by .shadow-black {
+.funded-by .shadow-black {
     position: absolute;
     z-index: 10;
     background-color: #000;
@@ -1575,7 +1600,7 @@
     left: 0;
     opacity: .5;
 }
-.founded-by .founded-content {
+.funded-by .funded-content {
     position: absolute;
     z-index: 11;
     height: 500px;
@@ -1587,24 +1612,24 @@
     text-align: center;
     color: #c9c9c9;
 }
-.founded-by .founded-content img {
+.funded-by .funded-content img {
     width: 600px;
     display: block;
     margin: 0 auto;
 }
-.founded-by .founded-content .founded-gdansk-link {
+.funded-by .funded-content .funded-gdansk-link {
     display: inline-block;
     font-size: 34px;
 }
-.founded-by .founded-content .founded-gdansk-link:hover {
+.funded-by .founded-content .funded-gdansk-link:hover {
     color: #c9c9c9;
 }
 
 @media (min-width: 2000px) {
-    .founded-by .video-section video {
+    .funded-by .video-section video {
         display: none;
     }
-    .founded-by .founded-content {
+    .funded-by .funded-content {
         display: block;
         position: relative;
         padding: 100px;
@@ -1613,44 +1638,70 @@
         background-repeat: no-repeat;
         background-size: 100%;
     }
-    .founded-by .shadow-black {
+    .funded-by .shadow-black {
         display: none;
     }
-    .founded-by {
+    .funded-by {
        height: auto;
     }
-    .founded-by .founded-content img {
+    .funded-by .funded-content img {
         width: 480px;
     }
-    .founded-by .founded-content .founded-gdansk-link {
+    .funded-by .funded-content .funded-gdansk-link {
         font-size: 38px;
     }
 }
 
 @media (max-width: 1460px) {
-    .founded-by .video-section video {
+    .funded-main-page span {
+      font-size: 20px;
+    }
+    .funded-main-page a img {
+      width: 180px;
+      display: block;
+      margin: 0 auto;
+    }
+    .funded-by .video-section video {
         display: none;
     }
-    .founded-by .founded-content {
+    .funded-by .funded-content {
         display: block;
         position: relative;
         padding: 50px;
         height: auto;
         background-image: url(/assets/img/founded-by.png);
     }
-    .founded-by .shadow-black {
+    .funded-by .shadow-black {
         display: none;
     }
-    .founded-by {
+    .funded-by {
        height: auto;
     }
-    .founded-by .founded-content img {
+    .funded-by .funded-content img {
         width: 380px;
     }
-    .founded-by .founded-content .founded-gdansk-link {
+    .funded-by .funded-content .funded-gdansk-link {
         font-size: 22px;
         color: #fff;
     }
+}
+@media (max-width: 460px) {
+  .funded-by-header {
+    margin-left: -15px;
+      display: inline-block;
+      line-height: 1;
+  }
+  .funded-by-header span {
+      font-size: 12px;
+      margin-top: 10px;
+      padding-left: 28px
+  }
+
+  .funded-by-header img {
+      width: 90px;
+      display: block;
+  }
+
 }
 
 /*---------------------------------------------------------------------*/
