@@ -1637,6 +1637,7 @@
         background-image: url(/assets/img/founded-by.png);
         background-repeat: no-repeat;
         background-size: 100%;
+      
     }
     .funded-by .shadow-black {
         display: none;
@@ -1667,18 +1668,24 @@
     .funded-by .funded-content {
         display: block;
         position: relative;
-        padding: 50px;
+        padding: 25px;
         height: auto;
+        background-color: #1c1c1c;
         background-image: url(/assets/img/founded-by.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
     }
     .funded-by .shadow-black {
         display: none;
     }
     .funded-by {
-       height: auto;
+        height: auto;
+    }
+    .funded-by h1 {
+        font-size: 30px;
     }
     .funded-by .funded-content img {
-        width: 380px;
+        width: 260px;
     }
     .funded-by .funded-content .funded-gdansk-link {
         font-size: 22px;
@@ -1687,7 +1694,7 @@
 }
 @media (max-width: 460px) {
   .funded-by-header {
-    margin-left: -15px;
+      margin-left: -15px;
       display: inline-block;
       line-height: 1;
   }
