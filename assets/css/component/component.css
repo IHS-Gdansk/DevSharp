@@ -2012,11 +2012,15 @@
 }
 
 .timeline-heading {
-  cursor: pointer;
   position: relative;
 }
 
-.timeline-heading:after {
+.timeline-heading-show {
+  cursor: pointer;
+}
+
+
+.timeline-heading-show:after{
   content: "Show";
   position: absolute;
   top: 10px;
@@ -2024,7 +2028,7 @@
   color: #fff;
   transition: all .5s ease;
 }
-.timeline-heading:hover:after {
+.timeline-heading-show:hover:after {
   color: #000;
   transition: all .5s ease;
 }
