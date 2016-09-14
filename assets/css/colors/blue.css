@@ -20,10 +20,10 @@
 /*  1. NAVBAR
 /*---------------------------------------------------------------------*/
 .navbar.navbar-fixed-top .navbar-toggle {
-  background-color: #00a8cb;
+  background-color: #00b140;
 }
 .navbar.navbar-fixed-top .navbar-nav > li > a:hover {
-  color: #00a8cb;
+  color: #00b140;
 }
 .navbar.navbar-fixed-top .navbar-nav > li.active a,
 .navbar.navbar-fixed-top .navbar-nav > li.active a:hover {
@@ -36,7 +36,7 @@
   }
 }
 .navbar-trigger-open a {
-  background-color: #00a8cb;
+  background-color: #00b140;
 }
 
 
@@ -44,10 +44,10 @@
 /*  2. QUOTE SECTION
 /*---------------------------------------------------------------------*/
 #quote > .section-inner > .section-content .quote-text > .quote-icon > i {
-  color: #00a8cb;
+  color: #00b140;
 }
 #quote > .section-inner > .section-content .quote-text > h2.quote-by {
-  color: #00a8cb;
+  color: #00b140;
 }
 
 
@@ -55,10 +55,10 @@
 /*  3. KEEP IN TOUCH SECTION
 /*---------------------------------------------------------------------*/
 #keep-in-touch .social-icon-item > a:hover {
-  color: #00a8cb;
+  color: #00b140;
 }
 #keep-in-touch .social-icon-item > a:hover .social-icon > i {
-  color: #00a8cb;
+  color: #00b140;
 }
 
 
@@ -66,18 +66,18 @@
 /*  4. CONTACT US SECTION
 /*---------------------------------------------------------------------*/
 #contact-us > .section-inner > .section-content .content-message {
-  background-color: #00a8cb;
+  background-color: #00b140;
 }
 #contact-us > .section-inner > .section-content .form-group input,
 #contact-us > .section-inner > .section-content .form-group textarea {
-  border-left-color: #00a8cb;
+  border-left-color: #00b140;
 }
 #contact-us > .section-inner > .section-content .form-group span {
-  background-color: #00a8cb;
-  border-color: #00a8cb;
+  background-color: #00b140;
+  border-color: #00b140;
 }
 #contact-us > .section-inner > .section-content .social-icon-text > h2 {
-  background-color: #00a8cb;
+  background-color: #00b140;
   border: 1px solid #2b79a7;
 }
 
