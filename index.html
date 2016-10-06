@@ -779,8 +779,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section-title text-center">
-                            <h3 class="main-title">I would like to attend Dev# conference</h3>
-                            <h4 class="sub-title">Send us a form and you will be the first one to be notified and invited for the conference! Dont wait! </h4>
+                            <h3 class="main-title">Registration Closed</h3>
                             <span class="section-line"></span>
 
                         </div>
@@ -796,99 +795,6 @@
                         </div>
                         <!-- //.social-icon-item -->
                     </div>
-
-                    <div class="col-sm-12 col-md-8  contact-form " ng-controller="contactCtrl">
-
-                        <div class="email-icon-margin social-icon-item text-center not-right-column top-column" >
-                            <a href="" ng-click="showForm()">
-                                <span class="social-icon">
-                                    <i class="fa fa-envelope-o"></i>
-                                </span>
-                                <h4>Send form</h4>
-                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </a>
-                        </div>
-
-                        <div class="form-message" ng-show="form_message" ng-class="{'-success': success_msg ,'-fail': fail_msg }">
-                          <h4>{{message}} </h4>
-                        </div>
-
-                        <form class="row" ng-show="show_form" ng-submit="sendEmail()">
-                            <div class="col-sm-12 col-md-6">
-                                <label class="labelAnim" for="name">Name</label>
-                                <input data-ng-model="name" type="text" name="name"  class="inputVal input -text" id="name" ng-minlengtH="1" required autocomplete="off">
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <label class="labelAnim" for="surname">Surname</label>
-                                <input data-ng-model="surname" type="text" name="username"  class="inputVal input -text" id="username" ng-minlengtH="1" required autocomplete="off">
-                            </div>
-                            <div class="col-sm-12 col-md-12">
-                                <label class="labelAnim" for="pass">Email</label>
-                                <input data-ng-model="email" type="text" name="password" class="inputVal input -text" id="pass" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required autocomplete="off">
-                            </div>
-                            <div class="col-sm-12 col-md-12">
-                                <span>Where did you hear about our conference?</span>
-                                <span><input name="aboutForm" type="checkbox" ng-model="from_employee" ng-change="hearAbout(1)"> from IHS Markit employee </span>
-                                <span><input name="aboutForm" type="checkbox" ng-model="from_fb" ng-change="hearAbout(2)"> facebook</span>
-                                <span><input name="aboutForm" type="checkbox" ng-model="from_other" ng-change="hearAbout(3)"> other</span>
-                            </div>
-                            <div class="col-md-12" ng-show="from_employee">
-                                <label class="labelAnim" for="ihs_employee">Write her/his name</label>
-                                <input data-ng-model="ihs_employee" type="text" name="ihs_employee"  class="inputVal input -text" id="ihs_employee" ng-minlengtH="1" autocomplete="off" ng-change="hearAbout(1)">
-                            </div>
-
-                            <div class="col-md-12" ng-show="from_other">
-                                <label class="labelAnim" for="about_other">Where did you hear ?</label>
-                                <input data-ng-model="about_other" type="text" name="about_other"  class="inputVal input -text" id="about_other" ng-minlengtH="1" autocomplete="off" ng-change="hearAbout(3)" >
-                            </div>
-
-                            <div class="col-sm-12 col-md-12">
-                                <span>Your Occupation / Job</span>
-                                <span><input name="occupationForm" type="checkbox" ng-model="software_developer" ng-change="occupation(1,'Software Developer')">  Software Developer</span>
-                                <span><input name="occupationForm" type="checkbox" ng-model="student" ng-change="occupation(2,'Student')"> Student</span>
-                                <span><input name="occupationForm" type="checkbox" ng-model="sqa_engineer" ng-change="occupation(3,'SQA Engineer')"> SQA Engineer</span>
-                                <span><input name="occupationForm" type="checkbox" ng-model="occupation_other" ng-change="occupation(4)" selected> Other</span>
-                            </div>
-
-                            <div class="col-md-12" ng-show="occupation_other">
-                                <label class="labelAnim" for="occu_other">Your Occupation / Job ?</label>
-                                <input data-ng-model="occu_other" type="text" name="occu_other"  class="inputVal input -text" id="occu_other" ng-minlengtH="1" ng-change="occupation(4)" autocomplete="off" >
-                            </div>
-
-                            <div class="col-sm-12 col-md-12">
-                                <label class="labelAnim" for="my_company">Your Company / Organization / School</label>
-                                <input data-ng-model="my_company" type="text" name="my_company"  class="inputVal input -text" id="my_company" ng-minlengtH="1" required autocomplete="off">
-                            </div>
-
-                            <div class="col-sm-12 col-md-12">
-                                <span>Area of interest / something about you</span>
-                                <textarea data-ng-model="about_me" class="inputVal input -area" ng-minlengtH="1" maxlength="500" required autocomplete="off"></textarea>
-                            </div>
-
-                            <div class="col-sm-12 col-md-12">
-                                <span>Special Meal Preferences</span>
-                                <span><input name="prefForm" type="checkbox" ng-model="eat_normal" ng-change="specialPreferences(1,'No')"> No</span>
-                                <span><input name="prefForm" type="checkbox" ng-model="eat_vege" ng-change="specialPreferences(2,'Vegetarian')"> Yes, Vegetarian</span>
-                                <span><input name="prefForm" type="checkbox" ng-model="eat_other" ng-change="specialPreferences(3,'Other')" selected> Yes, other</span>
-                            </div>
-
-                            <div class="col-md-12" ng-show="eat_other">
-                                <label class="labelAnim" for="occu_other">Special Meal Preferences ?</label>
-                                <input data-ng-model="pref_other" type="text" name="pref_other"  class="inputVal input -text" id="pref_other" ng-minlengtH="1" autocomplete="off" ng-change="specialPreferences(3,'Other')" >
-                            </div>
-
-                            <div class="col-md-12 text-center">
-                                <input type="submit" class="btn-send" value="Send" >
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-xs-3 col-sm-4 col-md-2">
-                        <div class="social-icon-item text-center not-right-column">
-                        </div>
-                        <!-- //.social-icon-item -->
-                    </div>
-
-                </div>
 
             </div>
 
