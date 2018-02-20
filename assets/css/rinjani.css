@@ -677,7 +677,15 @@ span.navbar-trigger-close a:hover {
 #fun-fact > .section-inner .section-content .section-title > .section-line {
   background-color: #b7ada4;
 }
-
+#fun-fact-manez {
+  background-image: url("../img/bg-manez-conf.jpg");
+}
+#fun-fact-manez > .section-inner .section-content .section-title {
+  color: #b7ada4;
+}
+#fun-fact-manez > .section-inner .section-content .section-title > .section-line {
+  background-color: #b7ada4;
+}
 
 /*---------------------------------------------------------------------*/
 /*  8. OUR MAIN SKILLS SECTION
