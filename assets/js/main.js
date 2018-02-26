@@ -130,7 +130,7 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
         "contact":{"en": "Contact", "pl": "Kontakt"},
         "language":{"en": "Przelacz na polski", "pl": "Switch to English"},
         "intro.1": {
-            "en": "Are you a developer or programmer looking to boost your skills? Then join us for the <strong>Dev# 2018</strong> conference - a free event dedicated to helping sharpen your knowledge and expertise.", 
+            "en": "Are you a developer or programmer looking to boost your skills? Then join us for the Dev# 2018 conference - a free event dedicated to helping sharpen your knowledge and expertise.", 
             "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich  umiejętności to dołącz do nas podczas konferencji Dev# 2018. Tradycyjnie już, jest to darmowa impreza skierowana do społeczności profesjonalistów IT nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
         },
         "intro.2": {
@@ -138,7 +138,7 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
             "pl": "Na naszą konferencję zaprosiliśmy sześciu prelegentów chętnych podzielić się z Wami swoim doświadczeniem. Dev# 2018 to unikalna okazja aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język zarówno z naszymi prelegentami jak i innymi uczestnikami konferencji."
         },
         "intro.3": { 
-            "en": "World-leading information provider <strong>IHS Markit</strong> has been organizing internal conferences in Gdańsk for a decade with <strong>Mark Seemann</strong>, <strong>Karl-Henrik Nilsson</strong> from <strong>Tretton37</strong>, <strong>Chris Klug</strong> from <strong>Novatrox Consulting AB</strong>, <strong>Michał Taszycki</strong> from <strong>Creative Mind</strong> and <strong>Tomasz Heimowski</strong> from <strong>IHS Markit</strong> joining us for wonderful event last time. This year, second time in a row, we share the knowledge - and the fun - with all interested developers!", 
+            "en": "World-leading information provider IHS Markit has been organizing internal conferences in Gdańsk for a decade with Mark Seemann, Karl-Henrik Nilsson from Tretton37, Chris Klug from Novatrox Consulting AB, Michał Taszycki from Creative Mind and Tomasz Heimowski from IHS Markit joining us for wonderful event last time. This year, second time in a row, we share the knowledge - and the fun - with all interested developers!", 
             "pl": "IHS Markit specjalizuje się w dostarczaniu danych i analiz klientom biznesowym i instytucjonalnym. Firma - zatrudniająca w Gdańsku liczny zespół deweloperski - wspiera również organizowanie wydarzeń IT. W poprzednich latach na naszych konferencjach prezentowali tacy prelegenci jak min. Mark Seemann, Karl-Henrik Nilsson (Tretton37), Chris Klug (Novatrox Consulting AB), Michał Taszycki (Creative Mind)."
         },
         "intro.4": {
