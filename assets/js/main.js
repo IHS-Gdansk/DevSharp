@@ -147,7 +147,7 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
         },
         "intro.link": {
             "en": "Get your ticket", 
-            "pl": "Zarejestruj sie"
+            "pl": "Zarejestruj się"
         },
         "facts":{"en": "FACTS", "pl": "Fakty"},
         "day":{"en": "Day", "pl": "Dzień"},
