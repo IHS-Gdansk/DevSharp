@@ -349,6 +349,9 @@ p {
   font-weight: 400;
   text-transform: uppercase;
 }
+.language-pointer {
+  cursor: pointer;
+}
 @media (min-width: 992px) {
   .navbar.navbar-fixed-top .navbar-nav > li > a {
     height: 60px;
