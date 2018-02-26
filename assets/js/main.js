@@ -114,160 +114,73 @@ $(function() {
     /*  CONTACT FORM
     /*---------------------------------------*/
 var app = angular.module("app",[]);
-app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
+app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
+    dict = {
+        "date": {
+            "en": "21st September 2018",
+            "pl": "21 Września 2018"
+        },
+        "organizedBy":{
+            "en": "Founded by",
+            "pl": "Organizowana przez"
+        },
+        "about":{"en": "About", "pl": "O konferencji"},
+        "speakers":{"en": "Speakers", "pl": "Prelegenci"},
+        "registration": {"en": "Registration", "pl": "Rejestracja"},
+        "contact":{"en": "Contact", "pl": "Kontakt"},
+        "language":{"en": "Przelacz na polski", "pl": "Switch to English"},
+        "intro.1": {
+            "en": "Are you a developer or programmer looking to boost your skills? Then join us for the <strong>Dev# 2018</strong> conference - a free event dedicated to helping sharpen your knowledge and expertise.", 
+            "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich  umiejętności to dołącz do nas podczas konferencji Dev# 2018. Tradycyjnie już, jest to darmowa impreza skierowana do społeczności profesjonalistów IT nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
+        },
+        "intro.2": {
+            "en": "Our conference this year features six international speakers eager to share their expertise and experience in the latest technologies. Don't miss this unique opportunity to learn from them, and to interact with both the speakers and other conference participants in a friendly, supportive atmosphere.", 
+            "pl": "Na naszą konferencję zaprosiliśmy sześciu prelegentów chętnych podzielić się z Wami swoim doświadczeniem. Dev# 2018 to unikalna okazja aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język zarówno z naszymi prelegentami jak i innymi uczestnikami konferencji."
+        },
+        "intro.3": { 
+            "en": "World-leading information provider <strong>IHS Markit</strong> has been organizing internal conferences in Gdańsk for a decade with <strong>Mark Seemann</strong>, <strong>Karl-Henrik Nilsson</strong> from <strong>Tretton37</strong>, <strong>Chris Klug</strong> from <strong>Novatrox Consulting AB</strong>, <strong>Michał Taszycki</strong> from <strong>Creative Mind</strong> and <strong>Tomasz Heimowski</strong> from <strong>IHS Markit</strong> joining us for wonderful event last time. This year, second time in a row, we share the knowledge - and the fun - with all interested developers!", 
+            "pl": "IHS Markit specjalizuje się w dostarczaniu danych i analiz klientom biznesowym i instytucjonalnym. Firma - zatrudniająca w Gdańsku liczny zespół deweloperski - wspiera również organizowanie wydarzeń IT. W poprzednich latach na naszych konferencjach prezentowali tacy prelegenci jak min. Mark Seemann, Karl-Henrik Nilsson (Tretton37), Chris Klug (Novatrox Consulting AB), Michał Taszycki (Creative Mind)."
+        },
+        "intro.4": {
+            "en": "So why wait? Join us! Learn with us!", 
+            "pl": "W tym roku - po raz kolejny - dzielimy się wiedzą ze wszystkimi zainteresowanymi!"
+        },
+        "intro.link": {
+            "en": "Get your ticket", 
+            "pl": "Zarejestruj sie"
+        },
+        "facts":{"en": "FACTS", "pl": "Fakty"},
+        "day":{"en": "Day", "pl": "Dzień"},
+        "talks":{"en": "Talks", "pl": "Prelekcji"},
+        "people":{"en": "People", "pl": "Ludzi"},
+        "cost":{"en": "Cost", "pl": "Koszt"},
+        "cost.price":{"en": "Free", "pl": "0 zł"},
+        "speaker.theimowski.about": {
+            "en": "Tomasz is a passionate developer whose main areas of interest are F# and Functional Programming in general. As a Software Engineer at IHS Markit he tackles problems from various domains. In his free time, apart from contributing to OSS projects and learning new tech stuff, he enjoys lifting weights as well as dancing.", 
+            "pl": ""
+        },
+        "speaker.abar.about": {
+            "en": "In his career Adam touched on various tech stacks, but even though he admires simple structures, simple rules and order, which are often hard to find on the Web, these are Web technologies that are his programming passion. Adam works on versatile web apps in Bright Inventions and runs the website that reviews device integration capabilities of the web -", 
+            "pl": ""
+        },
+        "comingsoon":{"en": "Coming soon", "pl": "Wkrótce"},
+        "registernow":{"en": "Register now!", "pl": "Zarejestruj sie juz teraz!"},
+        "findus":{"en": "You will find us here", "pl": "Znajdziesz nas tutaj"},
+        "office":{"en": "Gdańsk office site", "pl": "Strona gdańskiego biura"},
+        "intouch":{"en": "Get In Touch", "pl": "Kontakt"},
+        "aboutus.title":{"en": "About", "pl": "O"},
+        "aboutus.about":{ 
+            "en": "IHS Markit’s singular ability to look across complex industries, financial markets, and government actions that drive the global economy and provide our customers with insights, perspective and solutions for what really matters.", 
+            "pl": ""
+        },
+    };
+    language = "pl";
+ 
+    $scope.changeLanguage = function () {
+        language = (language === "pl") ? "en" : "pl";
+    };
 
-    var ip =0;
-    $.getJSON('//ipinfo.io/', function(data) {
-        ip = data.ip;
-    });
-    var today = new Date();
-    var str = today.toGMTString();
-    $scope.show_form = false;
-    $scope.about_conference ,$scope.your_occupation, $scope.my_company,  $scope.about_me, $scope.special_preferences;
-
-    $scope.showForm = function(){
-        $scope.show_form = $scope.show_form ? false : true;
-        $scope.show_form ? $("body").animate({ scrollTop: window.pageYOffset + 350 }, 500) : $("body").animate({ scrollTop: window.pageYOffset  - 350 }, 500);
-    }
-    
-    $scope.hearAbout = function(n){
-        $scope.from_employee = false;
-        $scope.from_fb = false;
-        $scope.from_other = false;
-
-        switch(n) {
-            case 1:
-                $scope.from_employee = true; 
-                $scope.about_conference = $scope.ihs_employee;
-            break;
-            case 2:
-                $scope.from_fb = true;
-                $scope.about_conference = "Facebook";
-            break;
-            case 3:
-                $scope.from_other = true; 
-                $scope.about_conference = $scope.about_other;
-            break;
-        }
-    }
-    
-    $scope.occupation = function(n, data){
-        $scope.software_developer = false;
-        $scope.student = false;
-        $scope.sqa_engineer = false;
-        $scope.occupation_other = false;
-
-        switch(n) {
-            case 1: 
-                $scope.software_developer= true; 
-                $scope.your_occupation = data;
-            break;
-            case 2: 
-                $scope.student = true;
-                $scope.your_occupation = data;
-                break;
-            case 3: 
-                $scope.sqa_engineer = true; 
-                $scope.your_occupation = data;
-            break;
-           case 4: 
-                $scope.occupation_other = true; 
-                $scope.your_occupation = $scope.occu_other;
-           break;
-        }
-    }
-    
-    $scope.specialPreferences = function(n, data){
-        $scope.eat_normal = false;
-        $scope.eat_vege = false;
-        $scope.eat_other = false;
-
-        switch(n) {
-            case 1: 
-                $scope.eat_normal = true;
-                $scope.special_preferences = data;
-            break;
-            case 2: 
-                $scope.eat_vege = true;
-                $scope.special_preferences = data;
-                break;
-            case 3: 
-                $scope.eat_other = true;
-                $scope.special_preferences = $scope.pref_other;
-            break;
-        }
-    }
-	
-	var onSuccess = function(data)
-	{
-		if(data.data === false)
-		{
-			return onError(data);
-		}
-		$scope.message = "Your form has been delivered";
-		$scope.success_msg = true;
-		$scope.fail_msg = false;
-		clearData();
-		$scope.show_form = false;
-		window.location.hash = "#keep-in-touch";
-	};
-	
-	var onError = function(data)
-	{
-		$scope.message = "Error! You form has not been delivered, please try again";
-		$scope.success_msg = false;
-		$scope.fail_msg = true;
-		window.location.hash = "#keep-in-touch";
-	};
-    
-    $scope.sendEmail = function(){
-        
-        var data = {
-            Name: $scope.name,
-            Surname: $scope.surname,
-            Email: $scope.email,
-            HearAboutConf: $scope.about_conference,
-            Job: $scope.your_occupation,
-            Company : $scope.my_company,
-            About : $scope.about_me,
-            SpecialMealPreferences: $scope.special_preferences,
-            IpAddress: ip,
-            GMTTime: str
-        };
-        $http({
-            method: 'POST',
-            url: 'http://devsharptest.azurewebsites.net/send',
-            data: JSON.stringify(data)
-        }).then(onSuccess, onError);
-
-        $scope.form_message = true;
-        
-    }
-     
-    var clearData = function() {
-        $scope.name = '';
-        $scope.surname = '';
-        $scope.email = '';
-        $scope.about_conference = '';
-        $scope.your_occupation = '';
-        $scope.my_company='';
-        $scope.about_me='';
-        $scope.special_preferences = '';
-        $scope.ihs_employee= '';
-        $scope.about_other = '';
-        $scope.occu_other = '';
-        $scope.pref_other= '';
-        $scope.from_employee = false;
-        $scope.from_fb = false;
-        $scope.from_other = false;
-        $scope.software_developer = false;
-        $scope.student = false;
-        $scope.sqa_engineer = false;
-        $scope.occupation_other = false;
-        $scope.eat_normal = false;
-        $scope.eat_vege = false;
-        $scope.eat_other = false;
-     }
-     
-     
+    $scope.translate = function(key) {
+        return dict[key][language];
+    };
 }]);
