@@ -352,6 +352,13 @@ p {
 .language-pointer {
   cursor: pointer;
 }
+.language-pointer > a > img {
+  max-width: 65%;
+  max-height: 65%;
+}
+.language-pointer > a {
+  background-color: transparent !important;
+}
 @media (min-width: 992px) {
   .navbar.navbar-fixed-top .navbar-nav > li > a {
     height: 60px;
