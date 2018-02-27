@@ -164,7 +164,7 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
             "pl": "Na swojej drodze zawodowej Adam zahaczył o różnorodne technologie, ale choć uwielbia proste struktury, proste reguły i porządek, których nieraz próżno w Webie szukać, to właśnie technologie webowe są jego programistyczną pasją. Tworzy wszechstronne aplikacje webowe w Bright Inventions oraz prowadzi stronę o możliwościach Weba na urządzeniach mobilnych -"
         },
         "comingsoon":{"en": "Coming soon", "pl": "Wkrótce"},
-        "registernow":{"en": "Register now!", "pl": "Zarejestruj sie!"},
+        "registernow":{"en": "Register now!", "pl": "Zarejestruj się!"},
         "findus":{"en": "You will find us here", "pl": "Miejsce konferencji"},
         "office":{"en": "Gdańsk office site", "pl": "Odwiedź stronę gdańskiego biura"},
         "intouch":{"en": "Get In Touch", "pl": "Kontakt"},
