@@ -354,7 +354,7 @@ p {
 }
 .language-pointer > a > img {
   max-width: 65%;
-  max-height: 65%;
+  max-height: 40%;
 }
 .language-pointer > a {
   background-color: transparent !important;

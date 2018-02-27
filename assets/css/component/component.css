@@ -1620,6 +1620,7 @@
 .funded-by .funded-content .funded-gdansk-link  {
     display: inline-block;
     font-size: 34px;
+    margin-top: 20px;
 }
 
 .funded-by .funded-content a.funded-gdansk-link  {

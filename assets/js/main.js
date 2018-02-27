@@ -131,11 +131,11 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
         "language":{"en": "Przelacz na polski", "pl": "Switch to English"},
         "intro.1": {
             "en": "Are you a developer or programmer looking to boost your skills? Then join us for the Dev# 2018 conference - a free event dedicated to helping sharpen your knowledge and expertise.", 
-            "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich  umiejętności to dołącz do nas podczas konferencji Dev# 2018. Tradycyjnie już, jest to darmowa impreza skierowana do społeczności profesjonalistów IT nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
+            "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich  umiejętności to dołącz do nas podczas konferencji Dev# 2018. Tradycyjnie już, jest to darmowa impreza skierowana do społeczności profesjonalistów IT, nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
         },
         "intro.2": {
             "en": "Our conference this year features six international speakers eager to share their expertise and experience in the latest technologies. Don't miss this unique opportunity to learn from them, and to interact with both the speakers and other conference participants in a friendly, supportive atmosphere.", 
-            "pl": "Na naszą konferencję zaprosiliśmy sześciu prelegentów chętnych podzielić się z Wami swoim doświadczeniem. Dev# 2018 to unikalna okazja aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język zarówno z naszymi prelegentami jak i innymi uczestnikami konferencji."
+            "pl": "Na naszą konferencję zaprosiliśmy sześciu prelegentów chętnych podzielić się z Wami swoim doświadczeniem. Dev# 2018 to unikalna okazja aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język, zarówno z naszymi prelegentami, jak i innymi uczestnikami konferencji."
         },
         "intro.3": { 
             "en": "World-leading information provider IHS Markit has been organizing internal conferences in Gdańsk for a decade with Mark Seemann, Karl-Henrik Nilsson from Tretton37, Chris Klug from Novatrox Consulting AB, Michał Taszycki from Creative Mind and Tomasz Heimowski from IHS Markit joining us for wonderful event last time. This year, second time in a row, we share the knowledge - and the fun - with all interested developers!", 
@@ -161,14 +161,14 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
         },
         "speaker.abar.about": {
             "en": "In his career Adam touched on various tech stacks, but even though he admires simple structures, simple rules and order, which are often hard to find on the Web, these are Web technologies that are his programming passion. Adam works on versatile web apps in Bright Inventions and runs the website that reviews device integration capabilities of the web -", 
-            "pl": ""
+            "pl": "Na swojej drodze zawodowej Adam zahaczył o różnorodne technologie, ale choć uwielbia proste struktury, proste reguły i porządek, których nieraz próżno w Webie szukać, to właśnie technologie webowe są jego programistyczną pasją. Tworzy wszechstronne aplikacje webowe w Bright Inventions oraz prowadzi stronę o możliwościach Weba na urządzeniach mobilnych -"
         },
         "comingsoon":{"en": "Coming soon", "pl": "Wkrótce"},
         "registernow":{"en": "Register now!", "pl": "Zarejestruj sie!"},
-        "findus":{"en": "You will find us here", "pl": "Znajdziesz nas tutaj"},
-        "office":{"en": "Gdańsk office site", "pl": "Strona gdańskiego biura"},
+        "findus":{"en": "You will find us here", "pl": "Miejsce konferencji"},
+        "office":{"en": "Gdańsk office site", "pl": "Odwiedź stronę gdańskiego biura"},
         "intouch":{"en": "Get In Touch", "pl": "Kontakt"},
-        "aboutus.title":{"en": "About", "pl": "O"},
+        "aboutus.title":{"en": "About", "pl": ""},
         "aboutus.about":{ 
             "en": "IHS Markit’s singular ability to look across complex industries, financial markets, and government actions that drive the global economy and provide our customers with insights, perspective and solutions for what really matters.", 
             "pl": ""
