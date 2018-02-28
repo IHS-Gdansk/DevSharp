@@ -169,9 +169,9 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
             "en": "In his career Adam touched on various tech stacks, but even though he admires simple structures, simple rules and order, which are often hard to find on the Web, these are Web technologies that are his programming passion. Adam works on versatile web apps in Bright Inventions and runs the website that reviews device integration capabilities of the web -", 
             "pl": "Na swojej drodze zawodowej Adam zahaczył o różnorodne technologie, ale choć uwielbia proste struktury, proste reguły i porządek, których nieraz próżno w Webie szukać, to właśnie technologie webowe są jego programistyczną pasją. Tworzy wszechstronne aplikacje webowe w Bright Inventions oraz prowadzi stronę o możliwościach Weba na urządzeniach mobilnych -"
         },
-        "speaker.abar.prelection.title": {"en": "", "pl": ""},
+        "speaker.abar.prelection.title": {"en": "What Web Can Do Today?", "pl": "What Web Can Do Today?"},
         "speaker.abar.prelection.info": {
-            "en": "",
+            "en": "We clearly associate smartphones with native applications because they are able to seamlessly integrate with the system, give an access to the device hardware interfaces and provide a decent performance. But are native technologies the only ones that make it possible? This presentation is an overview of the possibilities of web technologies in the area of integration with mobile devices and my small contribution to the discussion whether Web technologies will be able to replace native mobile applications one day.",
             "pl": "Smartfony jednoznacznie kojarzą nam się z natywnymi aplikacjami, gdyż potrafią one integrować się z systemem, dają dostęp do interfejsów sprzętowych urządzenia oraz zapewniają przyzwoitą wydajność. Ale czy tylko natywne technologie to umożliwiają? Ta prezentacja to przegląd możliwości technologii webowych pod kątem integracji z urządzeniami mobilnymi oraz trzy grosze do dyskusji o tym, czy technologie webowe będą w stanie wyprzeć natywne aplikacje mobilne."
         },
         
