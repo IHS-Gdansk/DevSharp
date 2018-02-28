@@ -140,7 +140,7 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
         },
         "intro.3": { 
             "en": "World-leading information provider IHS Markit has been organizing internal conferences in Gdańsk for a decade with Mark Seemann, Karl-Henrik Nilsson from Tretton37, Chris Klug from Novatrox Consulting AB, Michał Taszycki from Creative Mind and Tomasz Heimowski from IHS Markit joining us for wonderful event last time. This year, second time in a row, we share the knowledge - and the fun - with all interested developers!", 
-            "pl": "Aby zapewnić dobrą atmosferę, na miejsce spotkania wybraliśmy Stary Maneż w Gdańsku, który znany jest ze świetnej sali koncertowej, dobrej kuchni oraz wybornego, ważonego na miejscu piwa."
+            "pl": "Aby zapewnić dobrą atmosferę, na miejsce spotkania wybraliśmy Stary Maneż w Gdańsku, który znany jest ze świetnej sali koncertowej, dobrej kuchni oraz wybornego, warzonego na miejscu piwa."
         },
         "intro.4": {
             "en": "So why wait? Join us! Learn with us!", 
