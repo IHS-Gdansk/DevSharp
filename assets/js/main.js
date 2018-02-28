@@ -185,6 +185,7 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
             "en": "IHS Markit’s singular ability to look across complex industries, financial markets, and government actions that drive the global economy and provide our customers with insights, perspective and solutions for what really matters.", 
             "pl": ""
         },
+        "toannounced": { "en": "More speakers to be announced", "pl": "Więcej prelegentów wkrótce" }
     };
     language = "pl";
  
