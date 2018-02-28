@@ -177,13 +177,13 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
         },
         
         "comingsoon":{"en": "Coming soon", "pl": "Wkrótce"},
-        "registernow":{"en": "Register now!", "pl": "Zarejestruj się!"},
+        "registernow":{"en": "Register now", "pl": "Zarejestruj się"},
         "findus":{"en": "You will find us here", "pl": "Miejsce konferencji"},
         "office":{"en": "Gdańsk office site", "pl": "Odwiedź stronę gdańskiego biura"},
         "intouch":{"en": "Get In Touch", "pl": "Kontakt"},
         "toannounced": { "en": "More speakers to be announced", "pl": "Kolejni prelegenci wkrótce" }
     };
-    language = "pl";
+    language = "en";
 
     $scope.isPolish = function () { return language === "pl" };
     $scope.isEnglish = function () { return language === "en" };
