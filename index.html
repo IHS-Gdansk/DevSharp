@@ -81,15 +81,34 @@
                     </div>
                     <div class="col-md-12">
                         <div class="countdown text-center funded-main-page">
-                            <span>{{organizedBy}}</span>
+                            <span>{{translate("organizedBy")}}</span>
                             <a href="https://ihsmarkit.com/">
-                                <img src="assets/img/IHS-Markit-logo.svg" >
+                                <img class="space" src="assets/img/IHS-Markit-logo.svg" >
                             </a>
                         </div>
                         <!-- /.countdown -->
                     </div>
                     <!-- //.col-md-12 -->
                 </div>
+
+                <div class="row space">
+                    <div class="col-md-12">
+                        <div class="section-title text-center col-md-6">
+                            <h1 class="main-title btn btn-base-color btn-large btn-shadow toRight enlarge-text">
+                                <a href="https://www.eventbrite.com/e/dev-tickets-43381899429">{{translate("registernow")}}</a>
+                            </h1>
+                        </div>
+                        <div class="section-title text-center col-md-6">
+                            <h1 class="main-title btn btn-base-color btn-large btn-shadow toLeft enlarge-text">
+                                <a href="https://www.papercall.io/devsharp-2018">{{translate("papers")}}</a>
+                            </h1>
+                        </div>
+                        <!-- //.section-title -->
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+      
 
                 <!-- //.row -->
                 <!-- //.row -->
@@ -230,7 +249,6 @@
                             <p>
                                 {{translate("intro.3")}}
                             </p>
-                            <p>{{translate("intro.4")}} <a href="https://www.eventbrite.com/e/dev-tickets-43381899429">{{translate("intro.link")}}</a>!</p>
                             <!-- //.page-scroll -->
                         </div>
                         <!-- //.who-we-are-text -->
@@ -458,7 +476,6 @@
                     <div class="col-md-12">
                         <div class="section-title text-center">
                             <h2 class="main-title">Agenda</h3>
-                            <h3 class="sub-title">{{translate("comingsoon")}}</h2>
                         </div>
                         <!-- //.section-title -->
                     </div>
@@ -533,7 +550,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="section-title text-center">
-                            <h2 class="main-title"><a class="get-tickets" href="https://www.eventbrite.com/e/dev-tickets-43381899429">{{translate("registernow")}}</a></h3>
+                            <h2 class="main-title btn btn-base-color btn-large btn-shadow mr-0 mt-4">
+                                <a href="https://www.eventbrite.com/e/dev-tickets-43381899429">{{translate("registernow")}}</a>
+                            </h3>
                         </div>
                         <!-- //.section-title -->
                     </div>
@@ -564,17 +583,19 @@
                         <h2 class="main-title">{{translate("findus")}}</h2>
                         <h3 class="sub-title">Stary Maneż, ul. Słowackiego 23, Gdańsk</h3>
                     </div>
-                    <div class="manez-photos" >
+                    <div class="col-md-4" >
+                        <img src="assets/img/manez/2.jpg" alt="" class="img-responsive img-rounded"/>
+                    </div>
+                    <!-- //.item -->
+                    <div class="col-md-4">
                         <img src="assets/img/manez/1.jpg" alt="" class="img-responsive img-rounded"/>
                     <!-- //.item -->
-    
-                        <img src="assets/img/manez/2.jpg" alt="" class="img-responsive img-rounded"/>
-                    <!-- //.item -->
-    
+                    </div>
+                    <div class="col-md-4">
                         <img src="assets/img/manez/3.jpg" alt="" class="img-responsive img-rounded"/>
                     <!-- //.item -->
                 <!-- //.owl-carousel -->
-            </div>
+                    </div>
                     <!-- //.section-title -->
                 </div>
             </div>
@@ -610,6 +631,8 @@
         <section id="footer">
             <div class="container">
                 <div class="row">
+                    <div class="col-sm-4 col-md-4 footer-column not-right-column"></div>
+
                     <div class="col-sm-4 col-md-4 footer-column not-right-column">
                         <div class="footer-text">
                             <h4>{{translate("intouch")}}</h4>
@@ -651,22 +674,12 @@
                         </div>
                         <!-- //.footer-text -->
                     </div>
+
+                    <div class="col-sm-4 col-md-4 footer-column not-right-column"></div>
+                    <!-- //.footer-column -->
                     <!-- //.footer-column -->
 
-                    <div class="col-sm-4 col-md-4 footer-column not-right-column">
-                        <div class="footer-text">
-                            <h4>{{translate("aboutus.title")}} IHS Markit</h4>
-                            <p>The New Intelligence</p>
-                            <p>{{translate("aboutus.about")}}</p>
-                        </div>
                         <!-- //.footer-text -->
-                    </div>
-                    <!-- //.footer-column -->
-
-                    <div class="col-sm-4 col-md-4 footer-column">
-
-                        <!-- //.footer-text -->
-                    </div>
                     <!-- //.footer-column -->
                 </div>
                 <!-- //.row -->
@@ -701,7 +714,6 @@
     <script src="assets/plugins/jquery-sticky/jquery.sticky.js"></script>
     <script src="assets/plugins/jquery-inview/jquery.inview.min.js"></script>
     <script src="assets/plugins/jquery-countTo/jquery.countTo.js"></script>
-    <script src="assets/plugins/jquery-easypiechart/jquery.easypiechart.min.js"></script>
     <script src="assets/plugins/jquery-countdown/jquery.plugin.min.js"></script>
     <script src="assets/plugins/jquery-countdown/jquery.countdown.min.js"></script>
     <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
@@ -714,13 +726,10 @@
     <script src="assets/js/main.js"></script>
 
     <!-- Animation JS (Optional) -->
-    <script src="assets/js/animation.js"></script>
 
     <!-- Component JS -->
-    <script src="assets/js/component/bar-chart.js"></script>
     <script src="assets/js/component/countdown.js"></script>
     <script src="assets/js/component/counters.js"></script>
-    <script src="assets/js/component/pie-chart.js"></script>
     <script src="assets/js/component/portfolio.js"></script>
     <script src="assets/js/component/animation.js"></script>
 
