@@ -673,6 +673,9 @@ span.navbar-trigger-close a:hover {
 #who-we-are .who-we-are-text > .page-scroll {
   padding-top: 10px;
 }
+.announced-later {
+  color: #00b140;
+}
 
 
 /*---------------------------------------------------------------------*/
