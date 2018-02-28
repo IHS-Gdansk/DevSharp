@@ -127,6 +127,7 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
         "about":{"en": "About", "pl": "O konferencji"},
         "speakers":{"en": "Speakers", "pl": "Prelegenci"},
         "registration": {"en": "Registration", "pl": "Rejestracja"},
+        "papers": {"en": "Call for papers", "pl": "Zgłoś swoją prelekcję"},
         "contact":{"en": "Contact", "pl": "Kontakt"},
         "language":{"en": "Przelacz na polski", "pl": "Switch to English"},
         "intro.1": {
@@ -180,12 +181,7 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
         "findus":{"en": "You will find us here", "pl": "Miejsce konferencji"},
         "office":{"en": "Gdańsk office site", "pl": "Odwiedź stronę gdańskiego biura"},
         "intouch":{"en": "Get In Touch", "pl": "Kontakt"},
-        "aboutus.title":{"en": "About", "pl": ""},
-        "aboutus.about":{ 
-            "en": "IHS Markit’s singular ability to look across complex industries, financial markets, and government actions that drive the global economy and provide our customers with insights, perspective and solutions for what really matters.", 
-            "pl": ""
-        },
-        "toannounced": { "en": "More speakers to be announced", "pl": "Więcej prelegentów wkrótce" }
+        "toannounced": { "en": "More speakers to be announced", "pl": "Kolejni prelegenci wkrótce" }
     };
     language = "pl";
  

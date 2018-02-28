@@ -227,7 +227,35 @@ p {
     background-attachment: fixed;
   }
 }
+.btn-base-color {
+  background-color: #00b140;
+  color: #ffffff;
+}
 
+.btn-base-color > a {
+  color: #ffffff;
+}
+
+.btn-base-color > a:hover {
+  color: #dddddd;
+}
+
+.toRight {
+  float: right;
+}
+
+.toLeft {
+  float: left;
+}
+
+.space {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.enlarge-text {
+  font-size: 150%;
+}
 
 /*---------------------------------------------------------------------*/
 /*  2. ANIMATION DELAY
