@@ -184,7 +184,10 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
         "toannounced": { "en": "More speakers to be announced", "pl": "Kolejni prelegenci wkrótce" }
     };
     language = "pl";
- 
+
+    $scope.isPolish = function () { return language === "pl" };
+    $scope.isEnglish = function () { return language === "en" };
+    
     $scope.changeLanguage = function () {
         language = (language === "pl") ? "en" : "pl";
     };

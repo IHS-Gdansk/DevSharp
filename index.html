@@ -170,7 +170,10 @@
                     </li>
 
                     <li class="language-pointer">
-                        <a ng-click="changeLanguage()"><img src="assets/img/poleng.png"/></a>
+                        <a ng-click="changeLanguage()">
+                            <img ng-if="isPolish()" src="assets/img/eng.png"/>
+                            <img ng-if="isEnglish()" src="assets/img/pol.png"/>
+                        </a>
                     </li>
                 </ul>
 
