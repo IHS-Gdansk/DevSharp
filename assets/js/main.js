@@ -113,8 +113,8 @@ $(function() {
     /*---------------------------------------*/
     /*  CONTACT FORM
     /*---------------------------------------*/
-var app = angular.module("app",[]);
-app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
+var app = angular.module("app",['ngRoute']);
+app.controller("translateCtrl",['$scope', '$routeParams', function($scope, $routeParams){
     dict = {
         "date": {
             "en": "21st September 2018",
@@ -183,6 +183,18 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
         "intouch":{"en": "Get In Touch", "pl": "Kontakt"},
         "toannounced": { "en": "More speakers to be announced", "pl": "Kolejni prelegenci wkrótce" }
     };
+
+    function initLanguage(){
+        const lang = $routeParams.lang;
+        if(lang)
+        {
+            var correctLang = lang.ToLowerCase();
+            if(lang === "pl" || lang === "en")
+            {
+                language = correctLang;
+            }
+        }
+    }
     language = "en";
 
     $scope.isPolish = function () { return language === "pl" };
@@ -195,4 +207,6 @@ app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
     $scope.translate = function(key) {
         return dict[key][language];
     };
+
+    initLanguage();
 }]);
