@@ -114,7 +114,7 @@ $(function() {
     /*  CONTACT FORM
     /*---------------------------------------*/
 var app = angular.module("app",[]);
-app.controller("translateCtrl",['$scope', '$http', function($scope, $http){
+app.controller("translateCtrl",['$scope', function($scope){
     dict = {
         "date": {
             "en": "21st September 2018",
