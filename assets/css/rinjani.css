@@ -240,12 +240,19 @@ p {
   color: #dddddd;
 }
 
-.toRight {
-  float: right;
+@media(min-width: 1280px) {
+  .toRight {
+    float: right;
+  }
+
+  .toLeft {
+    float: left;
+  }
 }
 
-.toLeft {
-  float: left;
+.register-and-call-buttons {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .space {
