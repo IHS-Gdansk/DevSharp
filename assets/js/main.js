@@ -114,160 +114,85 @@ $(function() {
     /*  CONTACT FORM
     /*---------------------------------------*/
 var app = angular.module("app",[]);
-app.controller("contactCtrl",['$scope', '$http', function($scope, $http){
-
-    var ip =0;
-    $.getJSON('//ipinfo.io/', function(data) {
-        ip = data.ip;
-    });
-    var today = new Date();
-    var str = today.toGMTString();
-    $scope.show_form = false;
-    $scope.about_conference ,$scope.your_occupation, $scope.my_company,  $scope.about_me, $scope.special_preferences;
-
-    $scope.showForm = function(){
-        $scope.show_form = $scope.show_form ? false : true;
-        $scope.show_form ? $("body").animate({ scrollTop: window.pageYOffset + 350 }, 500) : $("body").animate({ scrollTop: window.pageYOffset  - 350 }, 500);
-    }
-    
-    $scope.hearAbout = function(n){
-        $scope.from_employee = false;
-        $scope.from_fb = false;
-        $scope.from_other = false;
-
-        switch(n) {
-            case 1:
-                $scope.from_employee = true; 
-                $scope.about_conference = $scope.ihs_employee;
-            break;
-            case 2:
-                $scope.from_fb = true;
-                $scope.about_conference = "Facebook";
-            break;
-            case 3:
-                $scope.from_other = true; 
-                $scope.about_conference = $scope.about_other;
-            break;
-        }
-    }
-    
-    $scope.occupation = function(n, data){
-        $scope.software_developer = false;
-        $scope.student = false;
-        $scope.sqa_engineer = false;
-        $scope.occupation_other = false;
-
-        switch(n) {
-            case 1: 
-                $scope.software_developer= true; 
-                $scope.your_occupation = data;
-            break;
-            case 2: 
-                $scope.student = true;
-                $scope.your_occupation = data;
-                break;
-            case 3: 
-                $scope.sqa_engineer = true; 
-                $scope.your_occupation = data;
-            break;
-           case 4: 
-                $scope.occupation_other = true; 
-                $scope.your_occupation = $scope.occu_other;
-           break;
-        }
-    }
-    
-    $scope.specialPreferences = function(n, data){
-        $scope.eat_normal = false;
-        $scope.eat_vege = false;
-        $scope.eat_other = false;
-
-        switch(n) {
-            case 1: 
-                $scope.eat_normal = true;
-                $scope.special_preferences = data;
-            break;
-            case 2: 
-                $scope.eat_vege = true;
-                $scope.special_preferences = data;
-                break;
-            case 3: 
-                $scope.eat_other = true;
-                $scope.special_preferences = $scope.pref_other;
-            break;
-        }
-    }
-	
-	var onSuccess = function(data)
-	{
-		if(data.data === false)
-		{
-			return onError(data);
-		}
-		$scope.message = "Your form has been delivered";
-		$scope.success_msg = true;
-		$scope.fail_msg = false;
-		clearData();
-		$scope.show_form = false;
-		window.location.hash = "#keep-in-touch";
-	};
-	
-	var onError = function(data)
-	{
-		$scope.message = "Error! You form has not been delivered, please try again";
-		$scope.success_msg = false;
-		$scope.fail_msg = true;
-		window.location.hash = "#keep-in-touch";
-	};
-    
-    $scope.sendEmail = function(){
+app.controller("translateCtrl",['$scope', function($scope){
+    dict = {
+        "date": {
+            "en": "21st September 2018",
+            "pl": "21 Września 2018"
+        },
+        "organizedBy":{
+            "en": "Founded by",
+            "pl": "Organizowana przez"
+        },
+        "about":{"en": "About", "pl": "O konferencji"},
+        "speakers":{"en": "Speakers", "pl": "Prelegenci"},
+        "registration": {"en": "Registration", "pl": "Rejestracja"},
+        "papers": {"en": "Call for papers", "pl": "Zgłoś swoją prelekcję"},
+        "contact":{"en": "Contact", "pl": "Kontakt"},
+        "language":{"en": "Przelacz na polski", "pl": "Switch to English"},
+        "intro.1": {
+            "en": "Are you a developer or programmer looking to boost your skills? Then join us for the Dev# 2018 conference - a free event dedicated to helping sharpen your knowledge and expertise.", 
+            "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich umiejętności to dołącz do nas podczas konferencji Dev# 2018. Tradycyjnie, jest to darmowa impreza skierowana do społeczności profesjonalistów IT, nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
+        },
+        "intro.2": {
+            "en": "Our conference this year features six international speakers eager to share their expertise and experience in the latest technologies. Don't miss this unique opportunity to learn from them, and to interact with both the speakers and other conference participants in a friendly, supportive atmosphere.", 
+            "pl": "Na naszą konferencję zaprosiliśmy sześciu prelegentów chętnych podzielić się z Wami swoim doświadczeniem oraz 250 słuchaczy! Dev# 2018 to unikalna okazja, aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język, zarówno z naszymi wykładowcami, jak i innymi uczestnikami konferencji."
+        },
+        "intro.3": { 
+            "en": "World-leading information provider IHS Markit has been organizing internal conferences in Gdańsk for a decade with Mark Seemann, Karl-Henrik Nilsson from Tretton37, Chris Klug from Novatrox Consulting AB, Michał Taszycki from Creative Mind and Tomasz Heimowski from IHS Markit joining us for wonderful event last time. This year, second time in a row, we share the knowledge - and the fun - with all interested developers!", 
+            "pl": "Aby zapewnić dobrą atmosferę, na miejsce spotkania wybraliśmy Stary Maneż w Gdańsku, który znany jest ze świetnej sali koncertowej, dobrej kuchni oraz wybornego, warzonego na miejscu piwa."
+        },
+        "intro.4": {
+            "en": "So why wait? Join us! Learn with us!", 
+            "pl": "W poprzednich latach na Dev# prezentowali m.in. Mark Seemann, Karl-Henrik Nilsson (Tretton37), Chris Klug (Novatrox Consulting AB), Michał Taszycki (Creative Mind) a w tym roku lista zaproszonych ekspertów zapowiada się równie obiecująco."
+        },
+        "intro.link": {
+            "en": "Get your ticket", 
+            "pl": "Zarejestruj się"
+        },
+        "facts":{"en": "FACTS", "pl": "Fakty"},
+        "day":{"en": "Day", "pl": "Dzień"},
+        "talks":{"en": "Talks", "pl": "Prelekcji"},
+        "people":{"en": "People", "pl": "Ludzi"},
+        "cost":{"en": "Cost", "pl": "Koszt"},
+        "cost.price":{"en": "Free", "pl": "0 zł"},
+        //speakers
+        "speaker.theimowski.about": {
+            "en": "Tomasz is a passionate developer whose main areas of interest are F# and Functional Programming in general. As a Senior Software Engineer at IHS Markit he tackles problems from various domains. In his free time, apart from contributing to OSS projects and learning new tech stuff, he enjoys lifting weights as well as dancing.",
+            "pl": "Tomasz jest programistą, którego głównymi obszarami zainteresowania są F# i programowanie funkcyjne. Jako Starszy Programista w firmie IHS Markit rozwiązuje problemy z różnych dziedzin. W wolnym czasie, oprócz kontrybuowania do projektów open source'owych i nauki nowych technologii, uwielbia podnosić ciężary i tańczyć."
+        },
+        "speaker.theimowski.prelection.title": {"en": "SAFE apps with F# web stack", "pl": "SAFE apps with F# web stack"},
+        "speaker.theimowski.prelection.info": {
+            "en": "Modern web stacks often involve more than one programming language. SAFE on the other side offers an end-to-end solution, with static typing safety and other powerful language capabilities on both server and client side in plain F#. In the presentation, we'll discover possibilities of the stack during a live demo. After starting a SAFE project from scratch, we'll develop new features by sharing common F# code between client and server and observe changes using hot module replacement. The corresponding letters in the acronym stand for: Suave - lightweight and composable web server, Azure - cloud provider from Microsoft, Fable - F# to JavaScript transpiler and Elmish - set of F# libraries imitating Elm architecture.",
+            "pl": "Nowoczesne web stacki często wymagają więcej niż jednego języka programowania. SAFE za to oferuje rozwiązanie end-to-end, ze statycznym typowaniem i innymi mocnymi stronami F# zarówno po stronie serwera jak i klienta. Podczas prezentacji, przy pomocy kodowania na żywo, poznamy możliwości tego stack'a. Po utworzeniu projektu SAFE od zera, rozwiniemy nowe funkcjonalności poprzez współdzielenie kodu F# między klientem a serwerem i zaobserwujemy natychmiastowe zmiany korzystając z Hot Module Replacement. Odpowiednie litery w akronimie SAFE oznaczają: Suave - lekki web serwer, Azure - dostawca chmury od Microsoftu, Fable - kompilator F# do JavaScript'u i Elmish - zbiór bibliotek F# do UI imitujący architekturę języka Elm."
+        },
+        "speaker.abar.about": {
+            "en": "In his career Adam touched on various tech stacks, but even though he admires simple structures, simple rules and order, which are often hard to find on the Web, these are Web technologies that are his programming passion. Adam works on versatile web apps in Bright Inventions and runs the website that reviews device integration capabilities of the web -", 
+            "pl": "Na swojej drodze zawodowej Adam zahaczył o różnorodne technologie, ale choć uwielbia proste struktury, proste reguły i porządek, których nieraz próżno w Webie szukać, to właśnie technologie webowe są jego programistyczną pasją. Tworzy wszechstronne aplikacje webowe w Bright Inventions oraz prowadzi stronę o możliwościach Weba na urządzeniach mobilnych -"
+        },
+        "speaker.abar.prelection.title": {"en": "What Web Can Do Today?", "pl": "What Web Can Do Today?"},
+        "speaker.abar.prelection.info": {
+            "en": "We clearly associate smartphones with native applications because they are able to seamlessly integrate with the system, give an access to the device hardware interfaces and provide a decent performance. But are native technologies the only ones that make it possible? This presentation is an overview of the possibilities of web technologies in the area of integration with mobile devices and my small contribution to the discussion whether Web technologies will be able to replace native mobile applications one day.",
+            "pl": "Smartfony jednoznacznie kojarzą nam się z natywnymi aplikacjami, gdyż potrafią one integrować się z systemem, dają dostęp do interfejsów sprzętowych urządzenia oraz zapewniają przyzwoitą wydajność. Ale czy tylko natywne technologie to umożliwiają? Ta prezentacja to przegląd możliwości technologii webowych pod kątem integracji z urządzeniami mobilnymi oraz trzy grosze do dyskusji o tym, czy technologie webowe będą w stanie wyprzeć natywne aplikacje mobilne."
+        },
         
-        var data = {
-            Name: $scope.name,
-            Surname: $scope.surname,
-            Email: $scope.email,
-            HearAboutConf: $scope.about_conference,
-            Job: $scope.your_occupation,
-            Company : $scope.my_company,
-            About : $scope.about_me,
-            SpecialMealPreferences: $scope.special_preferences,
-            IpAddress: ip,
-            GMTTime: str
-        };
-        $http({
-            method: 'POST',
-            url: 'http://devsharptest.azurewebsites.net/send',
-            data: JSON.stringify(data)
-        }).then(onSuccess, onError);
+        "comingsoon":{"en": "Coming soon", "pl": "Wkrótce"},
+        "registernow":{"en": "Register now", "pl": "Zarejestruj się"},
+        "findus":{"en": "You will find us here", "pl": "Miejsce konferencji"},
+        "office":{"en": "Gdańsk office site", "pl": "Odwiedź stronę gdańskiego biura"},
+        "intouch":{"en": "Get In Touch", "pl": "Kontakt"},
+        "toannounced": { "en": "More speakers to be announced", "pl": "Kolejni prelegenci wkrótce" }
+    };
+    language = "en";
 
-        $scope.form_message = true;
-        
-    }
-     
-    var clearData = function() {
-        $scope.name = '';
-        $scope.surname = '';
-        $scope.email = '';
-        $scope.about_conference = '';
-        $scope.your_occupation = '';
-        $scope.my_company='';
-        $scope.about_me='';
-        $scope.special_preferences = '';
-        $scope.ihs_employee= '';
-        $scope.about_other = '';
-        $scope.occu_other = '';
-        $scope.pref_other= '';
-        $scope.from_employee = false;
-        $scope.from_fb = false;
-        $scope.from_other = false;
-        $scope.software_developer = false;
-        $scope.student = false;
-        $scope.sqa_engineer = false;
-        $scope.occupation_other = false;
-        $scope.eat_normal = false;
-        $scope.eat_vege = false;
-        $scope.eat_other = false;
-     }
-     
-     
+    $scope.isPolish = function () { return language === "pl" };
+    $scope.isEnglish = function () { return language === "en" };
+
+    $scope.changeLanguage = function () {
+        language = (language === "pl") ? "en" : "pl";
+    };
+
+    $scope.translate = function(key) {
+        return dict[key][language];
+    };
 }]);

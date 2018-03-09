@@ -227,7 +227,42 @@ p {
     background-attachment: fixed;
   }
 }
+.btn-base-color {
+  background-color: #00b140;
+  color: #ffffff;
+}
 
+.btn-base-color > a {
+  color: #ffffff;
+}
+
+.btn-base-color > a:hover {
+  color: #dddddd;
+}
+
+@media(min-width: 1280px) {
+  .toRight {
+    float: right;
+  }
+
+  .toLeft {
+    float: left;
+  }
+}
+
+.register-and-call-buttons {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.space {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.enlarge-text {
+  font-size: 150%;
+}
 
 /*---------------------------------------------------------------------*/
 /*  2. ANIMATION DELAY
@@ -348,6 +383,16 @@ p {
   color: #fff;
   font-weight: 400;
   text-transform: uppercase;
+}
+.language-pointer {
+  cursor: pointer;
+}
+.language-pointer > a > img {
+  max-width: 65%;
+  max-height: 40%;
+}
+.language-pointer > a {
+  background-color: transparent !important;
 }
 @media (min-width: 992px) {
   .navbar.navbar-fixed-top .navbar-nav > li > a {
@@ -663,6 +708,9 @@ span.navbar-trigger-close a:hover {
 #who-we-are .who-we-are-text > .page-scroll {
   padding-top: 10px;
 }
+.announced-later {
+  color: #00b140;
+}
 
 
 /*---------------------------------------------------------------------*/
@@ -677,7 +725,15 @@ span.navbar-trigger-close a:hover {
 #fun-fact > .section-inner .section-content .section-title > .section-line {
   background-color: #b7ada4;
 }
-
+#fun-fact-manez {
+  background-image: url("../img/bg-manez-conf.jpg");
+}
+#fun-fact-manez > .section-inner .section-content .section-title {
+  color: #b7ada4;
+}
+#fun-fact-manez > .section-inner .section-content .section-title > .section-line {
+  background-color: #b7ada4;
+}
 
 /*---------------------------------------------------------------------*/
 /*  8. OUR MAIN SKILLS SECTION
@@ -743,6 +799,9 @@ span.navbar-trigger-close a:hover {
 /*---------------------------------------------------------------------*/
 #keep-in-touch {
   background-image: url("../img/bg-mic.jpg");
+}
+.get-tickets {
+  color: #00b140;
 }
 #keep-in-touch > .section-inner .section-content .section-title {
   color: #b7ada4;
@@ -1171,6 +1230,11 @@ span.navbar-trigger-close a:hover {
   #map.section > .section-inner .section-content .section-title {
     padding-bottom: 40px;
   }
+}
+
+.manez-photos > img {
+  float:left;
+  max-width:33%;
 }
 
 /*---------------------------------------------------------------------*/
