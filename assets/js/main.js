@@ -131,20 +131,16 @@ app.controller("translateCtrl",['$scope', function($scope){
         "contact":{"en": "Contact", "pl": "Kontakt"},
         "language":{"en": "Przelacz na polski", "pl": "Switch to English"},
         "intro.1": {
-            "en": "Are you a developer or programmer looking to boost your skills? Then join us for the Dev# 2018 conference - a free event dedicated to helping sharpen your knowledge and expertise.", 
+            "en": "If you are a developer looking to sharpen your skills then join us for the upcoming Dev# 2018 conference. As always it is a free event targeted at the Tri-City IT community with the purpose of sharing knowledge and connecting with other IT professionals.", 
             "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich umiejętności to dołącz do nas podczas konferencji Dev# 2018. Tradycyjnie, jest to darmowa impreza skierowana do społeczności profesjonalistów IT, nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
         },
         "intro.2": {
-            "en": "Our conference this year features six international speakers eager to share their expertise and experience in the latest technologies. Don't miss this unique opportunity to learn from them, and to interact with both the speakers and other conference participants in a friendly, supportive atmosphere.", 
+            "en": "We have invited six speakers eager to share their experience with the audience of 250! Dev# 2018 is a unique opportunity to find a common language with other conference participants and the speakers themselves in a relaxed and unassuming atmosphere.", 
             "pl": "Na naszą konferencję zaprosiliśmy sześciu prelegentów chętnych podzielić się z Wami swoim doświadczeniem oraz 250 słuchaczy! Dev# 2018 to unikalna okazja, aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język, zarówno z naszymi wykładowcami, jak i innymi uczestnikami konferencji."
         },
         "intro.3": { 
-            "en": "World-leading information provider IHS Markit has been organizing internal conferences in Gdańsk for a decade with Mark Seemann, Karl-Henrik Nilsson from Tretton37, Chris Klug from Novatrox Consulting AB, Michał Taszycki from Creative Mind and Tomasz Heimowski from IHS Markit joining us for wonderful event last time. This year, second time in a row, we share the knowledge - and the fun - with all interested developers!", 
+            "en": "In order to ensure proper vibe we chose Stary Maneż in Gdansk for the venue - the place known for its great concert venue, delicious cusine and excellent beer brewed on the location.", 
             "pl": "Aby zapewnić dobrą atmosferę, na miejsce spotkania wybraliśmy Stary Maneż w Gdańsku, który znany jest ze świetnej sali koncertowej, dobrej kuchni oraz wybornego, warzonego na miejscu piwa."
-        },
-        "intro.4": {
-            "en": "So why wait? Join us! Learn with us!", 
-            "pl": "W poprzednich latach na Dev# prezentowali m.in. Mark Seemann, Karl-Henrik Nilsson (Tretton37), Chris Klug (Novatrox Consulting AB), Michał Taszycki (Creative Mind) a w tym roku lista zaproszonych ekspertów zapowiada się równie obiecująco."
         },
         "intro.link": {
             "en": "Get your ticket", 
