@@ -139,7 +139,7 @@ app.controller("translateCtrl",['$scope', function($scope){
             "pl": "Na naszą konferencję zaprosiliśmy sześciu prelegentów chętnych podzielić się z Wami swoim doświadczeniem oraz 250 słuchaczy! Dev# 2018 to unikalna okazja, aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język, zarówno z naszymi wykładowcami, jak i innymi uczestnikami konferencji."
         },
         "intro.3": { 
-            "en": "In order to ensure proper vibe we chose Stary Maneż in Gdansk for the venue - the place known for its great concert venue, delicious cusine and excellent beer brewed on the location.", 
+            "en": "In order to ensure proper vibe, we chose Stary Maneż in Gdansk for the venue - the place known for its great concert venue, delicious cuisine, and excellent beer brewed on the location.", 
             "pl": "Aby zapewnić dobrą atmosferę, na miejsce spotkania wybraliśmy Stary Maneż w Gdańsku, który znany jest ze świetnej sali koncertowej, dobrej kuchni oraz wybornego, warzonego na miejscu piwa."
         },
         "intro.link": {
@@ -154,7 +154,7 @@ app.controller("translateCtrl",['$scope', function($scope){
         "cost.price":{"en": "Free", "pl": "0 zł"},
         //speakers
         "speaker.theimowski.about": {
-            "en": "Tomasz is a passionate developer whose main areas of interest are F# and Functional Programming in general. As a Senior Software Engineer at IHS Markit he tackles problems from various domains. In his free time, apart from contributing to OSS projects and learning new tech stuff, he enjoys lifting weights as well as dancing.",
+            "en": "Tomasz is a passionate developer whose main areas of interest are F# and Functional Programming in general. As a Senior Software Engineer at IHS Markit, he tackles problems from various domains. In his free time, apart from contributing to OSS projects and learning new tech stuff, he enjoys lifting weights as well as dancing.",
             "pl": "Tomasz jest programistą, którego głównymi obszarami zainteresowania są F# i programowanie funkcyjne. Jako Starszy Programista w firmie IHS Markit rozwiązuje problemy z różnych dziedzin. W wolnym czasie, oprócz kontrybuowania do projektów open source'owych i nauki nowych technologii, uwielbia podnosić ciężary i tańczyć."
         },
         "speaker.theimowski.prelection.title": {"en": "SAFE apps with F# web stack", "pl": "SAFE apps with F# web stack"},
