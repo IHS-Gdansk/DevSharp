@@ -178,7 +178,7 @@ app.controller("translateCtrl",['$scope', function($scope){
         "office":{"en": "Gdańsk office site", "pl": "Odwiedź stronę gdańskiego biura"},
         "intouch":{"en": "Get In Touch", "pl": "Kontakt"},
         "toannounced": { "en": "More speakers to be announced", "pl": "Kolejni prelegenci wkrótce" },
-        "agenda.toannounced": { "en": "Agenda to be announced", "pl": "Agenda wkrótce" }
+        "agenda.toannounced": { "en": "To be announced", "pl": "Wkrótce" }
     };
     language = "en";
 
