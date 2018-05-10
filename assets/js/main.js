@@ -121,8 +121,8 @@ app.controller("translateCtrl",['$scope', function($scope){
             "pl": "21 Września 2018"
         },
         "organizedBy":{
-            "en": "Founded by",
-            "pl": "Organizowana przez"
+            "en": "founded by",
+            "pl": "pod patronatem"
         },
         "about":{"en": "About", "pl": "O konferencji"},
         "speakers":{"en": "Speakers", "pl": "Prelegenci"},
