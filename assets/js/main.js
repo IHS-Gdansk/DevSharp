@@ -127,6 +127,7 @@ app.controller("translateCtrl",['$scope', function($scope){
         "about":{"en": "About", "pl": "O konferencji"},
         "speakers":{"en": "Speakers", "pl": "Prelegenci"},
         "registration": {"en": "Registration", "pl": "Rejestracja"},
+        "sponsors": {"en": "Sponsors", "pl": "Sponsorzy"},
         "papers": {"en": "Call for papers", "pl": "Zgłoś swoją prelekcję"},
         "contact":{"en": "Contact", "pl": "Kontakt"},
         "language":{"en": "Przelacz na polski", "pl": "Switch to English"},
