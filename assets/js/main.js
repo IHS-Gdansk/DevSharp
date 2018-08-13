@@ -180,6 +180,7 @@ app.controller("translateCtrl",['$scope', function($scope){
         "intouch":{"en": "Get In Touch", "pl": "Kontakt"},
         "toannounced": { "en": "More speakers to be announced", "pl": "Kolejni prelegenci wkrótce" },
         "agenda.toannounced": { "en": "To be announced", "pl": "Wkrótce" },
+        "agenda.break": { "en": "Break", "pl": "Przerwa" },
         "agenda.moredetailstofollowshortly": { "en": "More details to follow shortly", "pl": "Więcej szczegółów wkrótce" }
     };
     language = "en";
