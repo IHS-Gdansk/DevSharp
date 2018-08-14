@@ -1197,13 +1197,17 @@ span.navbar-trigger-close a:hover {
 /*  15. MAP
 /*---------------------------------------------------------------------*/
 #map {
-  background-color: #f2f4f4;
+  background-color: #1c1c1c;
+}
+
+#map > h3{
+  color: #;
 }
 #map #google-container {
   position: relative;
   width: 100%;
   height: 500px;
-  border-top: 5px solid #fff;
+  border-top: 5px solid #1c1c1c;
 }
 #map #google-container #cd-google-map {
   position: relative;
@@ -1222,7 +1226,7 @@ span.navbar-trigger-close a:hover {
 }
 
 #map.section > .section-inner .section-content .section-title {
-  color: #222;
+  color: #f2f4f4;
   text-transform: uppercase;
   padding-bottom: 40px;
 }
