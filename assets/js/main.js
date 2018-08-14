@@ -127,6 +127,7 @@ app.controller("translateCtrl",['$scope', function($scope){
         "about":{"en": "About", "pl": "O konferencji"},
         "speakers":{"en": "Speakers", "pl": "Prelegenci"},
         "registration": {"en": "Registration", "pl": "Rejestracja"},
+        "sponsors": {"en": "Sponsors", "pl": "Sponsorzy"},
         "papers": {"en": "Call for papers", "pl": "Zgłoś swoją prelekcję"},
         "contact":{"en": "Contact", "pl": "Kontakt"},
         "language":{"en": "Przelacz na polski", "pl": "Switch to English"},
@@ -178,7 +179,9 @@ app.controller("translateCtrl",['$scope', function($scope){
         "office":{"en": "Gdańsk office site", "pl": "Odwiedź stronę gdańskiego biura"},
         "intouch":{"en": "Get In Touch", "pl": "Kontakt"},
         "toannounced": { "en": "More speakers to be announced", "pl": "Kolejni prelegenci wkrótce" },
-        "agenda.toannounced": { "en": "To be announced", "pl": "Wkrótce" }
+        "agenda.toannounced": { "en": "To be announced", "pl": "Wkrótce" },
+        "agenda.break": { "en": "Break", "pl": "Przerwa" },
+        "agenda.moredetailstofollowshortly": { "en": "More details to follow shortly", "pl": "Więcej szczegółów wkrótce" }
     };
     language = "en";
 
