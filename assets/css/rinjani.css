@@ -157,6 +157,24 @@ p {
     font-size: 60px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .navbar .container {
+    width: 760px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .navbar ul {
+    margin-right: 0px!important;
+  }
+
+  .navbar-header .navbar-brand {
+    margin-left: 0px!important;
+  }
+
+}
+
 .section > .section-inner .section-content .section-title > .sub-title {
   font-size: 20px;
   font-weight: 300;
@@ -388,7 +406,7 @@ p {
   cursor: pointer;
 }
 .language-pointer > a > img {
-  max-width: 65%;
+  max-width: 30px!important;
   max-height: 40%;
 }
 .language-pointer > a {
