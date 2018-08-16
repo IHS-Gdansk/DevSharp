@@ -325,7 +325,7 @@
                                 <span class="number" data-from="0" data-to="250" data-refresh-interval="5"></span>
                             </div>
                             <!-- //.inner-content -->
-                            <p>{{translate("people")}}</p>
+                            <p>{{translate("attendees")}}</p>
                         </div>
                         <!-- //.counter-item -->
                     </div>
@@ -691,13 +691,13 @@
                                 <!-- //.timeline-panel -->
                             </li>
 
-                            <li class="timeline-inverted">
+                            <li>
                                 <div class="timeline-badge">
                                     <i class="fa fa-dot-circle-o"></i>
                                 </div>
                                 <!-- //.timeline-badge -->
 
-                                <div class="timeline-panel break-before">
+                                <div class="timeline-panel break-after">
                                     <div class="timeline-heading">
                                         <h3 class="timeline-title-break">12:20 | {{translate("agenda.break")}}</h3>
                                     </div>
@@ -706,7 +706,7 @@
                                 </div>
                                 <!-- //.timeline-panel -->
                             </li>
-                            <li>
+                            <li class="timeline-inverted">
                                 <div class="timeline-badge">
                                     <i class="fa fa-dot-circle-o"></i>
                                 </div>
@@ -726,13 +726,13 @@
                                 </div>
                                 <!-- //.timeline-panel -->
                             </li>
-                            <li>
+                            <li class="timeline-inverted">
                                 <div class="timeline-badge">
                                     <i class="fa fa-dot-circle-o"></i>
                                 </div>
                                 <!-- //.timeline-badge -->
 
-                                <div class="timeline-panel break-after">
+                                <div class="timeline-panel break-before">
                                     <div class="timeline-heading">
                                         <h3 class="timeline-title-break">13:30 | Lunch</h3>
                                     </div>
@@ -743,7 +743,7 @@
                                 <!-- //.timeline-panel -->
                             </li>
 
-                            <li class="timeline-inverted">
+                            <li>
                                 <div class="timeline-badge">
                                     <i class="fa fa-dot-circle-o"></i>
                                 </div>
@@ -765,13 +765,13 @@
                                 <!-- //.timeline-panel -->
                             </li>
 
-                            <li class="timeline-inverted">
+                            <li>
                                 <div class="timeline-badge">
                                     <i class="fa fa-dot-circle-o"></i>
                                 </div>
                                 <!-- //.timeline-badge -->
 
-                                <div class="timeline-panel break-before">
+                                <div class="timeline-panel break-after">
                                     <div class="timeline-heading">
                                         <h3 class="timeline-title-break">15:40 | {{translate("agenda.break")}}</h3>
                                     </div>
@@ -781,7 +781,7 @@
                                 <!-- //.timeline-panel -->
                             </li>
 
-                            <li>
+                            <li  class="timeline-inverted">
                                 <div class="timeline-badge">
                                     <i class="fa fa-dot-circle-o"></i>
                                 </div>
@@ -911,18 +911,11 @@
                             <h2 class="main-title">{{translate("sponsors")}}</h2>
                         </div>
                     </div>
-
-                    <div class="row extra-bottom-padding">
-                        <div class="col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2" >
-                            <a href="http://www.carfax.com/">
-                                <img src="assets/img/carfox_with_logo transparent.png" alt="" class="img-responsive img-rounded"/>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row extra-bottom-padding">
+                    
+                    <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <a href="http://www.automotivemastermind.com/">
-                                <img src="assets/img/am_logo.jpg" alt="" class="img-responsive img-rounded"/>
+                            <a href="http://www.ihsmarkit.com">
+                                <img src="assets/img/IHS-Markit-logo_black.svg" alt="" class="img-responsive img-rounded"/>
                             </a>
                         </div>
                     </div>
@@ -934,11 +927,19 @@
                             </a>
                         </div>
                     </div>
-                    
-                    <div class="row">
+
+                    <div class="row extra-bottom-padding">
                         <div class="col-md-8 col-md-offset-2">
-                            <a href="http://www.ihsmarkit.com">
-                                <img src="assets/img/IHS-Markit-logo_black.svg" alt="" class="img-responsive img-rounded"/>
+                            <a href="http://www.automotivemastermind.com/">
+                                <img src="assets/img/am_logo.jpg" alt="" class="img-responsive img-rounded"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row extra-bottom-padding">
+                        <div class="col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2" >
+                            <a href="http://www.carfax.com/">
+                                <img src="assets/img/carfox_with_logo transparent.png" alt="" class="img-responsive img-rounded"/>
                             </a>
                         </div>
                     </div>
@@ -1006,9 +1007,7 @@
         <section id="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4 col-md-4 footer-column not-right-column"></div>
-
-                    <div class="col-sm-4 col-md-4 footer-column not-right-column">
+                    <div class="col-sm-5 col-sm-offset-4 col-md-4 col-md-offset-4 footer-column not-right-column">
                         <div class="footer-text">
                             <h4>{{translate("intouch")}}</h4>
 
