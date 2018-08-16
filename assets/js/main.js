@@ -150,7 +150,7 @@ app.controller("translateCtrl",['$scope', function($scope){
         "facts":{"en": "FACTS", "pl": "Fakty"},
         "day":{"en": "Day", "pl": "Dzień"},
         "talks":{"en": "Talks", "pl": "Prelekcji"},
-        "people":{"en": "People", "pl": "Ludzi"},
+        "attendees":{"en": "Attendees", "pl": "Uczestników"},
         "cost":{"en": "Cost", "pl": "Koszt"},
         "cost.price":{"en": "Free", "pl": "0 zł"},
         //speakers
