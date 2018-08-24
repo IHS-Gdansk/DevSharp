@@ -136,8 +136,8 @@ app.controller("translateCtrl",['$scope', function($scope){
             "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich umiejętności to dołącz do nas podczas konferencji Dev# 2018. Tradycyjnie, jest to darmowa impreza skierowana do społeczności profesjonalistów IT, nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
         },
         "intro.2": {
-            "en": "We have invited six speakers eager to share their experience with the audience of 250! Dev# 2018 is a unique opportunity to find a common language with other conference participants and the speakers themselves in a relaxed and unassuming atmosphere.", 
-            "pl": "Na naszą konferencję zaprosiliśmy sześciu prelegentów chętnych podzielić się z Wami swoim doświadczeniem oraz 250 słuchaczy! Dev# 2018 to unikalna okazja, aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język, zarówno z naszymi wykładowcami, jak i innymi uczestnikami konferencji."
+            "en": "We have invited seven speakers eager to share their experience with the audience of 250! Dev# 2018 is a unique opportunity to find a common language with other conference participants and the speakers themselves in a relaxed and unassuming atmosphere.", 
+            "pl": "Na naszą konferencję zaprosiliśmy siedmioro prelegentów chętnych podzielić się z Wami swoim doświadczeniem oraz 250 słuchaczy! Dev# 2018 to unikalna okazja, aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język, zarówno z naszymi wykładowcami, jak i innymi uczestnikami konferencji."
         },
         "intro.3": { 
             "en": "After the talks there will be a networking party for all attendees. In order to ensure proper vibe, we chose Stary Maneż in Gdansk for the venue - the place known for its great concert venue, delicious cuisine, and excellent beer brewed on the location.", 
