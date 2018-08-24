@@ -159,18 +159,18 @@ p {
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
-  .navbar .container {
+  .navbar-fullsize .container {
     width: 760px;
     padding-left: 0px;
     padding-right: 0px;
   }
 
-  .navbar ul {
-    margin-right: 0px!important;
+  .navbar-fullsize ul {
+    margin-right: 0px;
   }
 
-  .navbar-header .navbar-brand {
-    margin-left: 0px!important;
+  .navbar-fullsize .navbar-header .navbar-brand {
+    margin-left: 0px;
   }
 
 }
