@@ -117,8 +117,8 @@ var app = angular.module("app",[]);
 app.controller("translateCtrl",['$scope', function($scope){
     dict = {
         "date": {
-            "en": "21st September 2018",
-            "pl": "21 Września 2018"
+            "en": "21st September 2019",
+            "pl": "21 Września 2019"
         },
         "organizedBy":{
             "en": "founded by",
@@ -132,12 +132,12 @@ app.controller("translateCtrl",['$scope', function($scope){
         "contact":{"en": "Contact", "pl": "Kontakt"},
         "language":{"en": "Przelacz na polski", "pl": "Switch to English"},
         "intro.1": {
-            "en": "If you are a developer looking to sharpen your skills then join us for the upcoming Dev# 2018 conference. As always it is a free event targeted at the Tri-City IT community with the purpose of sharing knowledge and connecting with other IT professionals.", 
-            "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich umiejętności to dołącz do nas podczas konferencji Dev# 2018. Tradycyjnie, jest to darmowa impreza skierowana do społeczności profesjonalistów IT, nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
+            "en": "If you are a developer looking to sharpen your skills then join us for the upcoming Dev# 2019 conference. As always it is a free event targeted at the Tri-City IT community with the purpose of sharing knowledge and connecting with other IT professionals.", 
+            "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich umiejętności to dołącz do nas podczas konferencji Dev# 2019. Tradycyjnie, jest to darmowa impreza skierowana do społeczności profesjonalistów IT, nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
         },
         "intro.2": {
-            "en": "We have invited seven speakers eager to share their experience with the audience of 250! Dev# 2018 is a unique opportunity to find a common language with other conference participants and the speakers themselves in a relaxed and unassuming atmosphere.", 
-            "pl": "Na naszą konferencję zaprosiliśmy siedmioro prelegentów chętnych podzielić się z Wami swoim doświadczeniem oraz 250 słuchaczy! Dev# 2018 to unikalna okazja, aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język, zarówno z naszymi wykładowcami, jak i innymi uczestnikami konferencji."
+            "en": "Dev# 2019 is a unique opportunity to find a common language with other conference participants and the speakers themselves in a relaxed and unassuming atmosphere.", 
+            "pl": "Dev# 2019 to unikalna okazja, aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język, zarówno z naszymi wykładowcami, jak i innymi uczestnikami konferencji."
         },
         "intro.3": { 
             "en": "After the talks there will be a networking party for all attendees. In order to ensure proper vibe, we chose Stary Maneż in Gdansk for the venue - the place known for its great concert venue, delicious cuisine, and excellent beer brewed on the location.", 
