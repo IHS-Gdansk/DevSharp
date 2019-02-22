@@ -175,8 +175,9 @@ app.controller("translateCtrl",['$scope', function($scope){
         
         "comingsoon":{"en": "Coming soon", "pl": "Wkrótce"},
         "registernow":{"en": "Register now", "pl": "Zarejestruj się"},
+        "registrationclosed": {"en": "Registration Closed", "pl": "Rejestracja zamknięta"},
+        "nextedition": {"en": "Next Edition", "pl": "Następna Edycja"},
         "findus":{"en": "You will find us here", "pl": "Miejsce konferencji"},
-        "previousevents": {"en": "Previous Events", "pl": "Poprzednie Wydarzenia"},
         "office":{"en": "Gdańsk office site", "pl": "Odwiedź stronę gdańskiego biura"},
         "intouch":{"en": "Get In Touch", "pl": "Kontakt"},
         "toannounced": { "en": "More speakers to be announced", "pl": "Kolejni prelegenci wkrótce" },

@@ -1,0 +1,5 @@
+@media (max-width: 767px) {
+    .dropdown-menu > li > a > span.dropdown-link {
+        color: #fff;
+    }
+}
