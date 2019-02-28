@@ -3,3 +3,15 @@
         color: #fff;
     }
 }
+
+.map-container {
+    height: 500px; 
+    background: #424245; 
+    margin-top: 5px;
+}
+
+.map-body {
+    height: 500px; 
+    width: 900px; 
+    margin: auto;
+}

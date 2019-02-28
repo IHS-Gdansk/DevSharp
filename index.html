@@ -25,6 +25,10 @@
     <link href="assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
     <link href="assets/plugins/jquery-magnificPopup/magnific-popup.css" rel="stylesheet" type="text/css">
 
+    <!-- Leaflet maps -->
+    <script src="assets/plugins/leaflet/leaflet.js"></script>
+    <link rel="stylesheet" href="assets/plugins/leaflet/leaflet.css" />
+
     <!-- Component CSS -->
     <link href="assets/css/component/component.css" rel="stylesheet" type="text/css">
     <link href="assets/css/component/colors/blue.css" rel="stylesheet" type="text/css">
@@ -555,7 +559,11 @@
                 </div>
             </div>
         </div>       
-        <!-- //.cd-google-map -->
+
+        <div class="map-container">
+            <div id="leaf-map" class="map-body"></div>
+        </div>
+        <!-- //.cd-map -->
     </div>
     <!-- //End Map -->
     <div class="funded-by">
@@ -684,8 +692,7 @@
 
     <!-- Map JS -->
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?client=gme-lrfairplay&channel=devsharp&v=3.25&callback=initMap"></script>
-    <script src="assets/js/component/map.js"></script>
+    <script src="assets/js/component/leaflet-map.js"></script>
 
 </body>
 
