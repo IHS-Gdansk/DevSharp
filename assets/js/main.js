@@ -132,8 +132,8 @@ app.controller("translateCtrl",['$scope', function($scope){
         "contact":{"en": "Contact", "pl": "Kontakt"},
         "language":{"en": "Przelacz na polski", "pl": "Switch to English"},
         "intro.1": {
-            "en": "If you are a developer looking to sharpen your skills then join us for the upcoming Dev# 2019 conference. As always it is a free event targeted at the Tri-City IT community with the purpose of sharing knowledge and connecting with other IT professionals.", 
-            "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich umiejętności to dołącz do nas podczas konferencji Dev# 2019. Tradycyjnie, jest to darmowa impreza skierowana do społeczności profesjonalistów IT, nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
+            "en": "If you are a developer looking to sharpen your skills then join us for the upcoming Dev# 2019 conference. As always it is a free* event targeted at the Tri-City IT community with the purpose of sharing knowledge and connecting with other IT professionals.", 
+            "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich umiejętności to dołącz do nas podczas konferencji Dev# 2019. Tradycyjnie, jest to darmowa* impreza skierowana do społeczności profesjonalistów IT, nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
         },
         "intro.2": {
             "en": "Dev# 2019 is a unique opportunity to find a common language with other conference participants and the speakers themselves in a relaxed and unassuming atmosphere.", 
@@ -147,12 +147,16 @@ app.controller("translateCtrl",['$scope', function($scope){
             "en": "Get your ticket", 
             "pl": "Zarejestruj się"
         },
+        "intro.footer": {
+            "en": "*Entry deposit is required, it will be returned if you show up on conference.",
+            "pl": "*Wymagana jest wstępna kaucja, która zostanie zwrócona gdy pojawisz się na konferencji."
+        },
         "facts":{"en": "FACTS", "pl": "Fakty"},
         "day":{"en": "Day", "pl": "Dzień"},
         "talks":{"en": "Talks", "pl": "Prelekcji"},
         "attendees":{"en": "Attendees", "pl": "Uczestników"},
         "cost":{"en": "Cost", "pl": "Koszt"},
-        "cost.price":{"en": "Free", "pl": "0 zł"},
+        "cost.price":{"en": "Free*", "pl": "0 zł*"},
         //speakers
         "speaker.theimowski.about": {
             "en": "Tomasz is a passionate developer whose main areas of interest are F# and Functional Programming in general. As a Senior Software Engineer at IHS Markit, he tackles problems from various domains. In his free time, apart from contributing to OSS projects and learning new tech stuff, he enjoys lifting weights as well as dancing.",
