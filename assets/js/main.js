@@ -7,7 +7,7 @@ $(function() {
         $('#page-loader').fadeOut('fast');
     });
   
-    
+
     /*---------------------------------------*/
     /*  JQUERY FOR PAGE SCROLLING FEATURE
     /*  requires jQuery Easing plugin
@@ -107,7 +107,15 @@ $(function() {
         }
       });
   
-  
+      // lazy load images with data-src attribute
+      $(window).on('load', function() {
+        images = $('img');
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].getAttribute('data-src')) {
+                images[i].setAttribute('src', images[i].getAttribute('data-src'));
+            }
+        }
+    });  
 });
 
     /*---------------------------------------*/
