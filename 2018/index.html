@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" ng-app="app"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" ng-app="app"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" ng-app="app"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="app"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Dev# Conference</title>
+    <meta http-equiv="Description" name="Description" content="Dev# 2018, conference organized in Gdańsk - a free event dedicated to helping sharpen your knowledge and expertise.">
+    <meta http-equiv="Keywords" name="Keywords" content="Dev#,C#,F#,Conference,Gdansk Conference,Gdańsk Conference,Dev Sharp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<!-- Customizations -->
+	<link href='../assets/css/rinjani_customized.css' rel='stylesheet' type='text/css' />
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" crossorigin="anonymous">
+
+    <!-- Plugins CSS -->
+    <link href="../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/plugins/animate-css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="../assets/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css">
+    <link href="../assets/plugins/jquery-magnificPopup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Leaflet maps -->
+    <script src="../assets/plugins/leaflet/leaflet.js"></script>
+    <link rel="stylesheet" href="../assets/plugins/leaflet/leaflet.css" />
+
+    <!-- Component CSS -->
+    <link href="../assets/css/component/component.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/component/colors/blue.css" rel="stylesheet" type="text/css">
+
+    <!-- Main CSS -->
+    <link href="../assets/css/index.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/rinjani.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/colors/blue.css" rel="stylesheet" type="text/css">
+
+    <!-- Modernizr JS for IE9 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../assets/plugins/modernizr.min.js"></script>
+    <![endif]-->
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="51" ng-controller="translateCtrl">
+
+    <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Begin Page Loader -->
+    <div id="page-loader">
+        <div class="preload">
+            <img src="../assets/img/preloader.gif" alt="Loading"/>
+        </div>
+        <!-- //.preload -->
+    </div>
+    <!-- //End Page Loader -->
+
+
+    <!-- Begin Intro Section -->
+    <section id="intro">
+        <div class="intro-body text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 intro-content">
+                        <div class="logo dev-sharp-logo">
+							<img class='img-responsive' src='../assets/img/logo_top3.svg' alt='DEV#'/>
+                        </div>
+                        <!-- //.logo -->
+                        <div class="intro-text text-center">
+                            &nbsp;
+                        </div>
+                        <!-- //.intro-text -->
+                    </div>
+                    <!-- //.intro-content -->
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="countdown text-center">
+                            <div class="cd-label">{{translate("date")}} | Gdańsk, Stary Maneż</div>
+                        </div>
+                        <!-- /.countdown -->
+                    </div>
+                    <div class="col-md-12">
+                        <div class="countdown text-center funded-main-page">
+                            <span>{{translate("organizedBy")}}</span>
+                            <a href="https://ihsmarkit.com/">
+                                <img class="space" src="../assets/img/IHS-Markit-logo.svg" >
+                            </a>
+                        </div>
+                        <!-- /.countdown -->
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+            </div>
+            <!-- //.container -->
+        </div>
+        <!-- //.intro-body -->
+    </section>
+    <!-- //End Intro Section -->
+
+
+    <!-- Begin Navbar -->
+    <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top navbar-fullsize" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-rj-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#page-top">
+                    <img class='img-responsive vcenter' src='../assets/img/web_logo-s2.png' alt='DEV#'/>
+                </a>
+<!--                 <div class="funded-by-header">
+                  <span>Founded by&nbsp;&nbsp;&nbsp;</span>
+                  <a href="https://ihsmarkit.com/">
+                    <img src="../assets/img/IHS-Markit-logo_black.svg" width="100%">
+                  </a>
+                </div>
+ -->            </div>
+            <!-- //.navbar-header -->
+
+            <div class="navbar-collapse collapse navbar-rj-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="page-scroll">
+                        <a href="#who-we-are">{{translate("about")}}</a>
+                    </li>
+
+                    <li class="page-scroll">
+                        <a href="#meet-the-team">{{translate("speakers")}}</a>
+                    </li>
+
+                    <li class="page-scroll">
+                        <a href="#our-history">Agenda</a>
+                    </li>
+
+					<li class="page-scroll">
+                        <a href="#keep-in-touch">{{translate("registration")}}</a>
+                    </li>
+
+                    <li class="page-scroll">
+                        <a href="#sponsors">{{translate("sponsors")}}</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html">{{translate("nextedition")}}</a>
+                    </li>
+
+                    <li class="page-scroll">
+                        <a href="#footer">{{translate("contact")}}</a>
+                    </li>
+
+                    <li class="language-pointer">
+                        <a ng-click="changeLanguage()">
+                            <img ng-if="isPolish()" src="../assets/img/eng.png"/>
+                            <img ng-if="isEnglish()" src="../assets/img/pol.png"/>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- //.navbar-collapse -->
+        </div>
+        <!-- //.container -->
+    </nav>
+    <!-- //End Navbar -->
+
+
+    <!-- Begin Who We Are Section -->
+    <section id="who-we-are" class="section">
+        <div class="section-inner">
+            <div class="container section-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h2 class="main-title">{{translate("about")}} <strong>Dev</strong>#</h2>
+<!--
+                            <h2 class="main-title">THE CONFERENCE</h2>
+
+                            <h3 class="sub-title">Some things you should know about Dev# Conference</h3>
+ -->
+                            <span class="section-line"></span>
+                        </div>
+                        <!-- //.section-title -->
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="carousel-who-we-are" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <img src="../assets/img/2016/1.jpg" alt="" class="img-responsive img-rounded"/>
+                            </div>
+                            <!-- //.item -->
+
+                            <div class="item">
+                                <img src="../assets/img/2016/2.jpg" alt="" class="img-responsive img-rounded"/>
+                            </div>
+                            <!-- //.item -->
+
+                            <div class="item">
+                                <img src="../assets/img/2016/3.jpg" alt="" class="img-responsive img-rounded"/>
+                            </div>
+                            <!-- //.item -->
+                            <div class="item">
+                                <img src="../assets/img/2016/4.jpg" alt="" class="img-responsive img-rounded"/>
+                            </div>
+
+                            <div class="item">
+                                <img src="../assets/img/2016/5.jpg" alt="" class="img-responsive img-rounded"/>
+                            </div>
+
+                            <div class="item">
+                                <img src="../assets/img/2016/6.jpg" alt="" class="img-responsive img-rounded"/>
+                            </div>
+                            <!-- //.item -->
+                        </div>
+                        <!-- //.owl-carousel -->
+                    </div>
+                    <!-- //.col-md-6 -->
+
+                    <div class="col-md-6">
+                        <div class="who-we-are-text">
+                            <p class="sub-title">
+                                {{translate("intro.1")}}
+                            </p>
+
+                            <p>
+                                {{translate("intro.2")}}
+                            </p>
+                            <p>
+                                {{translate("intro.3")}}
+                            </p>
+                            <!-- //.page-scroll -->
+                        </div>
+                        <!-- //.who-we-are-text -->
+                    </div>
+                    <!-- //.col-md-6 -->
+                </div>
+                <!-- //.row -->
+            </div>
+            <!-- //.section-content -->
+        </div>
+        <!-- //.section-inner -->
+    </section>
+    <!-- //End Who We Are Section -->
+
+
+    <!-- Begin Fun Fact Section -->
+    <section id="fun-fact-manez" class="section section-bgimage-yes">
+        <div class="section-inner">
+            <div class="section-overlay"></div>
+
+            <div class="container section-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h2 class="main-title">{{translate("facts")}}</h2>
+<!--                             <h2 class="main-title">Facts</h2>
+
+                            <h3 class="sub-title">Dev# in numbers</h3>
+ -->
+                            <span class="section-line"></span>
+                        </div>
+                        <!-- //.section-title -->
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-3 text-center">
+                        <div class="counter-item not-right-column top-column">
+                            <i class="fa fa-calendar"></i>
+
+                            <div class="inner-content">
+                                <span class="number" data-from="1" data-to="1" data-refresh-interval="1"></span>
+                            </div>
+                            <!-- //.inner-content -->
+
+                            <p>{{translate("day")}}</p>
+                        </div>
+                        <!-- //.counter-item -->
+                    </div>
+                    <!-- //.col-xs-6 col-sm-6 col-md-3 -->
+
+                    <div class="col-xs-6 col-sm-6 col-md-3 text-center">
+                        <div class="counter-item not-right-column top-column">
+                            <i class="fa fa-smile-o"></i>
+                            <div class="inner-content">
+                                <span class="number" data-from="0" data-to="7" data-refresh-interval="10"></span>
+                            </div>
+                            <!-- //.inner-content -->
+                            <p>{{translate("talks")}}</p>
+                        </div>
+                        <!-- //.counter-item -->
+                    </div>
+                    <!-- //.col-xs-6 col-sm-6 col-md-3 -->
+
+                    <div class="col-xs-6 col-sm-6 col-md-3 text-center">
+                        <div class="counter-item">
+                            <i class="fa fa-user"></i>
+                            <div class="inner-content">
+                                <span class="number" data-from="0" data-to="250" data-refresh-interval="5"></span>
+                            </div>
+                            <!-- //.inner-content -->
+                            <p>{{translate("attendees")}}</p>
+                        </div>
+                        <!-- //.counter-item -->
+                    </div>
+                    <!-- //.col-xs-6 col-sm-6 col-md-3 -->
+
+                    <div class="col-xs-6 col-sm-6 col-md-3 text-center">
+                        <div class="counter-item not-right-column">
+                            <i class="fa fa-money"></i>
+                            <div class="inner-content">
+                                <span class="text">{{translate("cost.price")}}</span>
+                            </div>
+                            <!-- //.inner-content -->
+                            <p>{{translate("cost")}}</p>
+                        </div>
+                        <!-- //.counter-item -->
+                    </div>
+                    <!-- //.col-xs-6 col-sm-6 col-md-3 -->
+
+
+                </div>
+                <!-- //.row -->
+            </div>
+            <!-- //.section-content -->
+        </div>
+        <!-- //.section-inner -->
+    </section>
+    <!-- //End Fun Fact Section -->
+
+	    <!-- Begin Meet The Team Section -->
+    <section id="meet-the-team" class="section">
+        <div class="section-inner">
+            <div class="container section-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h2 class="main-title">{{translate("speakers")}}</h2>
+                            <!-- <h3 class="sub-title">Meet people we will learn from</h3> -->
+                        </div>
+                        <!-- //.section-title -->
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+
+                <div class="row extra-bottom-padding">
+                    <div class="col-sm-0 col-md-2 team-item not-right-column"></div>
+
+                    <div class="col-sm-6 col-md-4 team-item not-right-column top-column">
+                        <div class="img-rounded team-element">
+                            <div class="team-inner">
+                                <div class="team-detail">
+                                    <div class="team-content">
+                                        <h4>Rachel Appel</h4>
+                                        <p>Rachel has been in the business of creating software for over 25 years, as an author, mentor, and speaker at top industry conferences such as VSLive!, DevConnections, Øredev, //build and Techorama. During her career, she has worked on projects of all sizes from the smallest of apps, to the largest enterprise systems at some of the world’s leading companies. Rachel’s expertise is in web development on the Microsoft stack, specifically Azure Functions, ASP.NET MVC, Web Forms, SignalR, C#, HTML, CSS, JavaScript, and TypeScript. Her hobbies include science, AI, reading, languages, and travel.</p>
+                                    </div>
+                                    <!-- //.team-content -->
+                                </div>
+                                <!-- //.team-detail -->
+                            </div>
+                            <!-- //.team-inner -->
+                            <img src="../assets/img/RachelAppel_cropped_bw.jpg" alt="" class="img-responsive img-rounded"/>
+                        </div>
+                        <!-- //.team-element -->
+                    </div>
+                    <!-- //.team-item -->
+
+                    <div class="col-sm-6 col-md-4 team-item not-right-column top-column">
+                        <div class="img-rounded team-element">
+                            <div class="team-inner">
+                                <div class="team-detail">
+                                    <div class="team-content">
+                                        <h4>Adam Bar</h4>
+                                        <p>I started my developer career 10 years ago with simple PHP websites. Later I touched on .NET, Ruby, Java and Objective-C, but I have always come back to the Web that I value for its openness and accessibility for everyone. And even though I admire simple structures, simple rules and order, which are often hard to find on the Web, these are Web technologies that are my programming passion. Daily I work on versatile web apps in Bright Inventions and take care of my website that aims to review device integration capabilities of the web - <a href="https://whatwebcando.today/">whatwebcando.today</a></p>
+                                    </div>
+                                    <!-- //.team-content -->
+                                </div>
+                                <!-- //.team-detail -->
+                            </div>
+                            <!-- //.team-inner -->
+                            <img src="../assets/img/adambar_bw.jpg" alt="" class="img-responsive img-rounded"/>
+                        </div>
+                        <!-- //.team-element -->
+                    </div>
+                    <div class="col-sm-0 col-md-2 team-item not-right-column"></div>
+                    <!-- //.team-item -->
+                    <div class="col-sm-0 col-md-12 team-item not-right-column"></div>
+                    <!-- //.team-item -->
+                    <div class="col-sm-0 col-md-2 team-item"></div>
+                    <div class="col-sm-6 col-md-4 team-item not-right-column">
+                        <div class="img-rounded team-element">
+                            <div class="team-inner">
+                                <div class="team-detail">
+                                    <div class="team-content">
+                                        <h4>Tomasz Heimowski</h4>
+                                        <p>Tomasz is a passionate developer whose main areas of interest are F# and Functional Programming in general. As a Senior Software Engineer at Datto he tackles problems from various domains. In his free time, apart from contributing to OSS projects and learning new tech stuff, he enjoys lifting weights as well as dancing.</p>
+                                    </div>
+                                    <!-- //.team-content -->
+                                </div>
+                                <!-- //.team-detail -->
+                            </div>
+                            <!-- //.team-inner -->
+                            <img src="../assets/img/tomasz_heimowski.jpg" alt="" class="img-responsive img-rounded"/>
+                        </div>
+                        <!-- //.team-element -->
+                    </div>
+                    <!-- //.team-item -->
+
+                    <div class="col-sm-6 col-md-4 team-item not-right-column">
+                        <div class="img-rounded team-element">
+                            <div class="team-inner">
+                                <div class="team-detail">
+                                    <div class="team-content">
+                                        <h4>Silviu Niculita</h4>
+                                        <p>Silviu Niculita is a passionate software developer and technologist focused on solving hard business problems with cutting-edge technology.
+                                            For the last 10 years, he has managed teams building and operating high-performance enterprise systems from hardware architecture to design, development, quality assurance and support.
+                                            Silviu’s areas of interest are around how small teams can be most effective in building real software: high-quality, secure systems at the highest limits of robustness, performance, and flexibility.
+                                            Silviu has worked with groups like Microsoft and Siemens and he also holds numerous IT certifications.ns.    
+                                            </p>
+                                    </div>
+                                    <!-- //.team-content -->
+                                </div>
+                                <!-- //.team-detail -->
+                            </div>
+                            <!-- //.team-inner -->
+                            <img src="../assets/img/SilviuNiculita_bw.jpg" alt="" class="img-responsive img-rounded"/>
+                        </div>
+                        <!-- //.team-element -->
+                    </div>
+                    <div class="col-sm-0 col-md-2 team-item not-right-column"></div>
+                    <!-- //.team-item -->
+                    <div class="col-sm-0 col-md-12 team-item not-right-column"></div>
+                    <!-- //.team-item -->
+                    <div class="col-sm-0 col-md-2 team-item"></div>
+                    <div class="col-sm-6 col-md-4 team-item not-right-column">
+                        <div class="img-rounded team-element">
+                            <div class="team-inner">
+                                <div class="team-detail">
+                                    <div class="team-content">
+                                        <h4>Tomasz Pęczek</h4>
+                                        <p>Developer, <a href="https://www.tpeczek.com/">blogger</a>, <a href="https://sessionize.com/tpeczek/">speaker</a> and <a href="https://github.com/tpeczek">open source author/contributor</a> focused on Web Development in context of <a href="https://www.asp.net/">ASP.NET</a> (Core) platform. For more than 10 years he has been creating web applications for health care, banking or e-learning industries. Currently he works in Oracle as an applications architect where his main areas of responsibility are web applications performance and security. Microsoft MVP in Visual Studio and Development Technologies category.</p>
+                                    </div>
+                                    <!-- //.team-content -->
+                                </div>
+                                <!-- //.team-detail -->
+                            </div>
+                            <!-- //.team-inner -->
+                            <img src="../assets/img/TomaszPeczek_bw.png" alt="" class="img-responsive img-rounded"/>
+                        </div>
+                        <!-- //.team-element -->
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 team-item not-right-column">
+                        <div class="img-rounded team-element">
+                            <div class="team-inner">
+                                <div class="team-detail">
+                                    <div class="team-content">
+                                        <h4>Karl-Henrik Nilsson</h4>
+                                        <p>Karl-Henrik “KH” Nilsson is a turbulently enthusiastic and unstoppably curious Swedish software developer with a soft spot for the software community. Working with everything from web applications to cellphone towers has given him a very particular set of skills and the habit of breaking out a soldering iron to solve the oddest of problems.
+                                            Today Karl-Henrik is a Technical Evangelist at Microsoft focusing predominately on Azure and cloud technology. He blogs at <a href="http://karl-henrik.se/">karl-henrik.se</a> and tweets as @KHNilsson.
+                                            </p>
+                                    </div>
+                                    <!-- //.team-content -->
+                                </div>
+                                <!-- //.team-detail -->
+                            </div>
+                            <!-- //.team-inner -->
+                            <img src="../assets/img/Karl-Henrik_Nilsson.jpg" alt="" class="img-responsive img-rounded"/>
+                        </div>
+                        <!-- //.team-element -->
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-md-offset-2 team-item not-right-column">
+                        <div class="img-rounded team-element">
+                            <div class="team-inner">
+                                <div class="team-detail">
+                                    <div class="team-content">
+                                        <h4>Maxime Beugnet</h4>
+                                        <p>Maxime has been working with MongoDB for the past 4 years and in the IT industry for 7 years. He is a MongoDB and Java trainer, with DEV and DBA MongoDB certifications. Maxime recently joined MongoDB as a Developer Advocate EMEA to share his experience with the community. He loves clean code, scuba diving, code challenges and Vikings.                                           </p>
+                                    </div>
+                                    <!-- //.team-content -->
+                                </div>
+                                <!-- //.team-detail -->
+                            </div>
+                            <!-- //.team-inner -->
+                            <img src="../assets/img/maxime-beugnet-bw.jpg" alt="" class="img-responsive img-rounded"/>
+                        </div>
+                        <!-- //.team-element -->
+                    </div>
+                    <!-- //.team-item -->
+                </div>
+                <!-- //.row -->
+            </div>
+            <!-- //.section-content -->
+        </div>
+        <!-- //.section-inner -->
+    </section>
+    <!-- //End Meet The Team Section -->
+
+        <!-- Begin Coming Soon Section -->
+    <section id="coming-soon" class="section section-bgimage-yes">
+        <div class="section-inner">
+            <div class="section-overlay"></div>
+
+            <div class="container section-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- //.section-title -->
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="countdown text-center">
+                            <div class="cd-label">{{translate("date")}} | Gdańsk, Stary Maneż</div>
+                            <div class="cd-content" data-year="2018" data-month="9" data-day="21" data-hour="9"></div>
+                        </div>
+                        <!-- /.countdown -->
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+            </div>
+            <!-- //.section-content -->
+        </div>
+        <!-- //.section-inner -->
+    </section>
+    <!-- //End Coming Soon Section -->
+
+    <!-- Begin Our History Section -->
+    <section id="our-history" class="section">
+        <div class="section-inner">
+            <div class="container section-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h3 class="main-title">Agenda</h3>
+                            <span class="section-line"></span>
+                        </div>
+                        <!-- //.section-title -->
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!-- Begin Timeline -->
+                        <ul class="timeline">
+							<li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-speaker">8:00</h3>
+                                        <h3 class="timeline-title">Conference registration</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->                                    
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-speaker">9:00</h3>
+                                        <h3 class="timeline-title">Conference opening</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+
+                                    <div class="timeline-heading timeline-heading-show">
+                                        <h3 class="timeline-speaker">9:10 | Rachel Appel</h3>
+                                        <h3 class="timeline-title">Robot Apocalypse</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+
+                                    <div class="timeline-body">
+                                        <p>What does the future hold for humankind? Is it possible to build machines that are conscious, or that can evolve to become conscious? Many leading-edge thinkers say that it is, and are expecting it to happen - they call it, the Singularity. Can the Singularity happen? If it does, will it be in our lifetimes and will the machines rise and destroy us? Can we live together, must we destroy them, or is there another way? Let's find out! In this session, we'll walk through today's bleeding edge technology, where you'll learn about both delightful and frightening robots and AI systems, as well as how they are more commonplace than you think. You'll see how we interact with them now and how we will in the future. They're everywhere doing everything from fun to medicine. You'll get a sneak peek at all the latest and greatest technological advances in many fields - robotics, AI, computing, cognitive, health, military, and other sciences, to see what the future of advanced technology may bring. The robots just might rise up, so In the meantime, sit back, watch the show, but most importantly, be NICE to your computers!</p>
+                                    </div>
+                                    <!-- //.timeline-body -->
+
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel break-after">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title-break ">10:00 | {{translate("agenda.break")}}</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading timeline-heading-show">
+                                        <h3 class="timeline-speaker">10:20 | Adam Bar</h3>
+                                        <h3 class="timeline-title">What Web Can Do Today?</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+
+                                    <div class="timeline-body">
+                                        <p>Overview of the newer Web Platform APIs allowing integration of the web apps with the device’s hardware & OS, with simple demos for each feature covered. The range is from local storage techniques, through offline capabilities and push notifications, to Bluetooth, USB, shape detection etc.</p>
+                                    </div>
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel break-before">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title-break">11:10 | {{translate("agenda.break")}}</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading timeline-heading-show">
+                                        <h3 class="timeline-speaker">11:30 | Tomasz Heimowski</h3>
+                                        <h3 class="timeline-title">SAFE apps with F# web stack</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+
+                                    <div class="timeline-body">
+                                        <p>Modern web stacks often involve more than one programming language. SAFE on the other side offers an end-to-end solution, with static typing safety and other powerful language capabilities on both server and client side in plain F#.
+                                            In this talk you will learn about the possibilities of the stack during a live demo. After starting a SAFE project from scratch, you will develop new features by sharing common F# code between client and server and observe changes using hot module replacement. 
+                                            </p>
+                                    </div>
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel break-after">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title-break">12:20 | {{translate("agenda.break")}}</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading timeline-heading-show">
+                                        <h3 class="timeline-speaker">12:40 | Silviu Niculita</h3>
+                                        <h3 class="timeline-title">Blockchain for mere mortals</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+
+                                    <div class="timeline-body">
+                                        <p>Blockchain has been positioned as THE next big thing, that will disrupt many existing businesses and industries. But what is it really? And how can we as software professionals benefit from it? During this session we will cover what the Blockchain is, how it works, some scenarios showing potential use cases and then finally how we can leverage Microsoft’s Platform as a Service offering in the Blockchain space to get started developing distributed apps very quickly.</p>
+                                    </div>
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel break-before">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title-break">13:30 | Lunch</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading timeline-heading-show">
+                                        <h3 class="timeline-speaker">14:50 | Maxime Beugnet</h3>
+                                        <h3 class="timeline-title">Simplifying & accelerating application development with MongoDB's intelligent operational data platform</h3>
+                                        <!-- //.timeline-body -->
+                                    </div>
+                                    <!-- //.timeline-heading -->
+
+                                    <div class="timeline-body">
+                                        <p>Simplifying & accelerating application development with MongoDB's intelligent operational data platform</p>
+                                    </div>
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel break-after">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title-break">15:40 | {{translate("agenda.break")}}</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li  class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading timeline-heading-show">
+                                        <h3 class="timeline-speaker">16:00 | Tomasz Pęczek</h3>
+                                        <h3 class="timeline-title">Real-time capabilities in ASP.NET Core web applications beyond (or besides) SignalR</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+
+                                    <div class="timeline-body">
+                                        <p>As the title suggests, this talk won’t be about SignalR (it might be mentioned, but that’s all). It will walk through native technologies like WebSockets, Server-Sent Events and Push API based notifications. It will show how to use them, compare them and suggest when to use which by exploring their strong and weak sides.</p>
+                                    </div>                                    <!-- //.timeline-body -->
+                                </div>
+                            </li>
+
+                            
+
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel break-before">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title-break">16:50 | {{translate("agenda.break")}}</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading timeline-heading-show">
+                                        <h3 class="timeline-speaker">17:10 | Karl-Henrik Nilsson</h3>
+                                        <h3 class="timeline-title">Rest Azured, this is how to do it right</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+
+                                    <div class="timeline-body">
+                                        <p>Over the years I have made mistakes, I have worked with customers that made mistakes, and I’ve learned how to solve them! In this session, I will regale on some war stories and talk about what mistakes people, and I made while implementing different architecture and hosting plans on Microsoft Azure, how we messed it up and how we eventually solved it. Let’s talk about how to do it right!</p>
+                                    </div>                                    <!-- //.timeline-body -->
+                                </div>
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-speaker">18:00</h3>
+                                        <h3 class="timeline-title">Networking Party & Free beer </h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-speaker">19:00</h3>
+                                        <h3 class="timeline-title">Concert Mitra and Pertone</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                </div>
+                            </li>
+                            
+                        </ul>
+                        <!-- //End Timeline -->
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+            </div>
+            <!-- //.section-content -->
+        </div>
+        <!-- //.section-inner -->
+    </section>
+    <!-- //End Our History Section -->
+	<!-- Begin Keep In Touch Section -->
+    <section id="keep-in-touch" class="section section-bgimage-yes">
+        <!-- .section-inner -->
+        <div class="section-inner">
+            <div class="section-overlay"></div>
+
+            <div class="container section-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h3 class="main-title">{{translate("registrationclosed")}}</h3>
+                        </div>
+                        <!-- //.section-title -->
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-2">
+                        <div class="social-icon-item text-center not-right-column">
+                        </div>
+                        <!-- //.social-icon-item -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- //.section-content -->
+        </div>
+        <!-- //.section-inner -->
+    </section>
+    <!-- //End Keep In Touch Section -->
+
+
+    <!-- Begin Sponsors Section -->
+    <section id="sponsors" class="section">
+            <div class="section-inner">
+                <div class="container section-content">
+                    <div class="row">
+                        <div class="section-title text-center">
+                            <h2 class="main-title">{{translate("sponsors")}}</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <a href="http://www.ihsmarkit.com">
+                                <img src="../assets/img/IHS-Markit-logo_black.svg" alt="" class="img-responsive img-rounded"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row extra-bottom-padding">
+                        <div class="col-md-8 col-md-offset-2">
+                            <a href="http://www.mongodb.com">
+                                <img src="../assets/img/mongo_logo_transparent.png" alt="" class="img-responsive img-rounded"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row extra-bottom-padding">
+                        <div class="col-md-8 col-md-offset-2">
+                            <a href="http://www.automotivemastermind.com/">
+                                <img src="../assets/img/am_logo.jpg" alt="" class="img-responsive img-rounded"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row extra-bottom-padding">
+                        <div class="col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2" >
+                            <a href="http://www.carfax.com/">
+                                <img src="../assets/img/carfox_with_logo transparent.png" alt="" class="img-responsive img-rounded"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //.section-content -->
+            </div>
+            <!-- //.section-inner -->
+        </section>
+        <!-- //End Sponsors Section -->
+
+    <!-- Begin Map -->
+    <div id="map" class="section">
+        <div class="section-inner">
+            <div class="container  section-content">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h2 class="main-title">{{translate("findus")}}</h2>
+                        <h3 class="sub-title">Stary Maneż, ul. Słowackiego 23, Gdańsk</h3>
+                    </div>
+                    <div class="col-md-4" >
+                        <img src="../assets/img/manez/1.jpg" alt="" class="img-responsive img-rounded"/>
+                    </div>
+                    <!-- //.item -->
+                    <div class="col-md-4">
+                        <img src="../assets/img/manez/2.jpg" alt="" class="img-responsive img-rounded"/>
+                    <!-- //.item -->
+                    </div>
+                    <div class="col-md-4">
+                        <img src="../assets/img/manez/3.jpg" alt="" class="img-responsive img-rounded"/>
+                    <!-- //.item -->
+                <!-- //.owl-carousel -->
+                    </div>
+                    <!-- //.section-title -->
+                </div>
+            </div>
+        </div>       
+
+        <div class="map-container">
+            <div id="leaf-map" class="map-body"></div>
+        </div>
+        <!-- //.cd-map -->
+    </div>
+    <!-- //End Map -->
+    <div class="funded-by">
+        <div class="video-section" data-autoplay="data-autoplay" data-loop="data-loop" data-video-urls="https://cdn.ihs.com/wwwihsmarkit/videos/home-hero-video-03-transcode.webm,https://cdn.ihs.com/wwwihsmarkit/videos/home-hero-video-03-transcode.mp4" data-wf-ignore="data-wf-ignore">
+            <video autoplay="autoplay" loop="loop" style="background-image: url(&quot;https://cdn.ihs.com/wwwihsmarkit/images/home-hero-poster.jpg&quot;);">
+                <source src="https://cdn.ihs.com/wwwihsmarkit/videos/home-hero-video-03-transcode.webm" data-wf-ignore="">
+                <source src="https://cdn.ihs.com/wwwihsmarkit/videos/home-hero-video-03-transcode.mp4" data-wf-ignore="">
+            </video>
+        </div>
+        <div class="shadow-black"></div>
+        <div class="funded-content">
+            <h1>{{translate("organizedBy")}}</h1>
+            <a href="https://ihsmarkit.com/">
+                <img src="../assets/img/IHS-Markit-logo.svg" width="100%">
+            </a>
+            <a class="funded-gdansk-link" href="http://www.ihsgdansk.com/">{{translate("office")}}</a>
+        </div>
+
+    </div>
+    <!-- Begin Footer -->
+    <footer class="footer">
+
+        <!-- Begin Footer Section -->
+        <section id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 col-sm-offset-4 col-md-4 col-md-offset-4 footer-column not-right-column">
+                        <div class="footer-text">
+                            <h4>{{translate("intouch")}}</h4>
+
+                            <ul class="icon-list list-unstyled">
+                                <li>
+                                    <i class="fa fa-phone"></i> +48 58 882 35 00
+                                </li>
+
+                                <li>
+                                  <a class="mailto" href="mailto:conference@devsharp.pl"><i class="fa fa-envelope-o"></i>conference@devsharp.pl</a>
+                                </li>
+
+                                <li>
+                                  <a class="mailto" href="https://www.google.pl/maps/place/IHS+Markit/@54.3733937,18.6019564,14z/data=!4m8!1m2!2m1!1sihs+markit!3m4!1s0x46fd7361faa8163b:0x638b8762e904d31b!8m2!3d54.3720109!4d18.63457" target="_blank"><i class="fa fa-map-marker"></i> Marynarki Polskiej 163, 80-868 Gdańsk</a>
+                                </li>
+                            </ul>
+
+                            <ul class="social-icon-list list-unstyled list-inline">
+                                <li>
+                                    <a href="//www.facebook.com/ihspoland"><i class="fa fa-facebook"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="//www.twitter.com/dev_sharp"><i class="fa fa-twitter"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="//plus.google.com/+IhsExplore"><i class="fa fa-google-plus"></i></a>
+                                </li>
+
+                                <li>
+                                    <a href="//www.linkedin.com/company/ihs"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                <li>
+                                    <a href="//www.ihsgdansk.com"><i class="fa fa-link"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //.footer-text -->
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 footer-column not-right-column"></div>
+                    <!-- //.footer-column -->
+                    <!-- //.footer-column -->
+
+                        <!-- //.footer-text -->
+                    <!-- //.footer-column -->
+                </div>
+                <!-- //.row -->
+            </div>
+            <!-- //.container -->
+        </section>
+        <!-- //End Footer Section -->
+
+        <!-- Begin Copyright -->
+        <div id="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!--<p>Copyright &copy; 2016 <a href="#">IHS.</a></p>-->
+                    </div>
+                    <!-- //.col-md-12 -->
+                </div>
+                <!-- //.row -->
+            </div>
+            <!-- //.container -->
+        </div>
+        <!-- //End Copyright -->
+    </footer>
+    <!-- //End Footer -->
+
+    <!-- Plugins JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="../assets/plugins/detectmobilebrowser/detectmobilebrowser.js"></script>
+    <script src="../assets/plugins/smartresize/smartresize.js"></script>
+    <script src="../assets/plugins/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../assets/plugins/jquery-sticky/jquery.sticky.js"></script>
+    <script src="../assets/plugins/jquery-inview/jquery.inview.min.js"></script>
+    <script src="../assets/plugins/jquery-countTo/jquery.countTo.js"></script>
+    <script src="../assets/plugins/jquery-countdown/jquery.plugin.min.js"></script>
+    <script src="../assets/plugins/jquery-countdown/jquery.countdown.min.js"></script>
+    <script src="../assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../assets/plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="../assets/plugins/jquery-magnificPopup/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="../2018/assets/js/main.js"></script>
+
+    <!-- Animation JS (Optional) -->
+
+    <!-- Component JS -->
+    <script src="../assets/js/component/countdown.js"></script>
+    <script src="../assets/js/component/counters.js"></script>
+    <script src="../assets/js/component/portfolio.js"></script>
+    <script src="../assets/js/component/animation.js"></script>
+
+    <!-- Map JS -->
+
+    <script src="../assets/js/component/leaflet-map.js"></script>
+
+</body>
+
+</html>

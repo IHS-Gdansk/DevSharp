@@ -7,7 +7,7 @@ $(function() {
         $('#page-loader').fadeOut('fast');
     });
   
-
+    
     /*---------------------------------------*/
     /*  JQUERY FOR PAGE SCROLLING FEATURE
     /*  requires jQuery Easing plugin
@@ -107,15 +107,7 @@ $(function() {
         }
       });
   
-      // lazy load images with data-src attribute
-      $(window).on('load', function() {
-        images = $('img');
-        for (var i = 0; i < images.length; i++) {
-            if (images[i].getAttribute('data-src')) {
-                images[i].setAttribute('src', images[i].getAttribute('data-src'));
-            }
-        }
-    });  
+  
 });
 
     /*---------------------------------------*/
@@ -125,8 +117,8 @@ var app = angular.module("app",[]);
 app.controller("translateCtrl",['$scope', function($scope){
     dict = {
         "date": {
-            "en": "21st September 2019",
-            "pl": "21 Września 2019"
+            "en": "21st September 2018",
+            "pl": "21 Września 2018"
         },
         "organizedBy":{
             "en": "founded by",
@@ -140,12 +132,12 @@ app.controller("translateCtrl",['$scope', function($scope){
         "contact":{"en": "Contact", "pl": "Kontakt"},
         "language":{"en": "Przelacz na polski", "pl": "Switch to English"},
         "intro.1": {
-            "en": "If you are a developer looking to sharpen your skills then join us for the upcoming Dev# 2019 conference. As always it is a free* event targeted at the Tri-City IT community with the purpose of sharing knowledge and connecting with other IT professionals.", 
-            "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich umiejętności to dołącz do nas podczas konferencji Dev# 2019. Tradycyjnie, jest to darmowa* impreza skierowana do społeczności profesjonalistów IT, nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
+            "en": "If you are a developer looking to sharpen your skills then join us for the upcoming Dev# 2018 conference. As always it is a free event targeted at the Tri-City IT community with the purpose of sharing knowledge and connecting with other IT professionals.", 
+            "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich umiejętności to dołącz do nas podczas konferencji Dev# 2018. Tradycyjnie, jest to darmowa impreza skierowana do społeczności profesjonalistów IT, nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
         },
         "intro.2": {
-            "en": "Dev# 2019 is a unique opportunity to find a common language with other conference participants and the speakers themselves in a relaxed and unassuming atmosphere.", 
-            "pl": "Dev# 2019 to unikalna okazja, aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język, zarówno z naszymi wykładowcami, jak i innymi uczestnikami konferencji."
+            "en": "We have invited seven speakers eager to share their experience with the audience of 250! Dev# 2018 is a unique opportunity to find a common language with other conference participants and the speakers themselves in a relaxed and unassuming atmosphere.", 
+            "pl": "Na naszą konferencję zaprosiliśmy siedmioro prelegentów chętnych podzielić się z Wami swoim doświadczeniem oraz 250 słuchaczy! Dev# 2018 to unikalna okazja, aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język, zarówno z naszymi wykładowcami, jak i innymi uczestnikami konferencji."
         },
         "intro.3": { 
             "en": "After the talks there will be a networking party for all attendees. In order to ensure proper vibe, we chose Stary Maneż in Gdansk for the venue - the place known for its great concert venue, delicious cuisine, and excellent beer brewed on the location.", 
@@ -155,16 +147,12 @@ app.controller("translateCtrl",['$scope', function($scope){
             "en": "Get your ticket", 
             "pl": "Zarejestruj się"
         },
-        "intro.footer": {
-            "en": "*Entry deposit is required, it will be returned if you show up on conference.",
-            "pl": "*Wymagana jest wstępna kaucja, która zostanie zwrócona gdy pojawisz się na konferencji."
-        },
         "facts":{"en": "FACTS", "pl": "Fakty"},
         "day":{"en": "Day", "pl": "Dzień"},
         "talks":{"en": "Talks", "pl": "Prelekcji"},
         "attendees":{"en": "Attendees", "pl": "Uczestników"},
         "cost":{"en": "Cost", "pl": "Koszt"},
-        "cost.price":{"en": "Free*", "pl": "0 zł*"},
+        "cost.price":{"en": "Free", "pl": "0 zł"},
         //speakers
         "speaker.theimowski.about": {
             "en": "Tomasz is a passionate developer whose main areas of interest are F# and Functional Programming in general. As a Senior Software Engineer at IHS Markit, he tackles problems from various domains. In his free time, apart from contributing to OSS projects and learning new tech stuff, he enjoys lifting weights as well as dancing.",
@@ -187,8 +175,9 @@ app.controller("translateCtrl",['$scope', function($scope){
         
         "comingsoon":{"en": "Coming soon", "pl": "Wkrótce"},
         "registernow":{"en": "Register now", "pl": "Zarejestruj się"},
+        "registrationclosed": {"en": "Registration Closed", "pl": "Rejestracja zamknięta"},
+        "nextedition": {"en": "Next Edition", "pl": "Następna Edycja"},
         "findus":{"en": "You will find us here", "pl": "Miejsce konferencji"},
-        "previousevents": {"en": "Previous Events", "pl": "Poprzednie Wydarzenia"},
         "office":{"en": "Gdańsk office site", "pl": "Odwiedź stronę gdańskiego biura"},
         "intouch":{"en": "Get In Touch", "pl": "Kontakt"},
         "toannounced": { "en": "More speakers to be announced", "pl": "Kolejni prelegenci wkrótce" },
