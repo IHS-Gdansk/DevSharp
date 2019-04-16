@@ -20,3 +20,8 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.bio-text {
+    height: 360px;
+    overflow-y: auto;
+}
