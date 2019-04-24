@@ -132,6 +132,7 @@ app.controller("translateCtrl",['$scope', function($scope){
             "en": "founded by",
             "pl": "pod patronatem"
         },
+        "about.link":{"en": "About", "pl": "O Konferencji"},
         "about":{"en": "About", "pl": "O"},
         "speakers":{"en": "Speakers", "pl": "Prelegenci"},
         "registration": {"en": "Registration", "pl": "Rejestracja"},
