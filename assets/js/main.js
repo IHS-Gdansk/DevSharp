@@ -141,7 +141,7 @@ app.controller("translateCtrl",['$scope', function($scope){
         "contact":{"en": "Contact", "pl": "Kontakt"},
         "language":{"en": "Przelacz na polski", "pl": "Switch to English"},
         "subtitle": {
-            "en": "IT Conference",
+            "en": "Conference for Software Developers",
             "pl": "Konferencji IT"
         },
         "intro.1": {
