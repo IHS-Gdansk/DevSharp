@@ -161,7 +161,7 @@ app.controller("translateCtrl",['$scope', function($scope){
             "pl": "Zarejestruj się"
         },
         "intro.footer": {
-            "en": "*Entry deposit is required, it will be returned if you show up on the conference.",
+            "en": "*Entry deposit is required, it will be returned if you show up at the conference.",
             "pl": "*Wymagana jest wstępna kaucja, która zostanie zwrócona gdy pojawisz się na konferencji."
         },
         "facts":{"en": "FACTS", "pl": "Fakty"},
