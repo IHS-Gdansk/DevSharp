@@ -153,8 +153,12 @@ app.controller("translateCtrl",['$scope', function($scope){
             "pl": "Dev# 2019 to unikalna okazja, aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język, zarówno z naszymi wykładowcami, jak i innymi uczestnikami konferencji."
         },
         "intro.3": { 
-            "en": "After the talks there will be a networking party for all attendees. In order to ensure proper vibe, we chose Stary Maneż in Gdansk for the venue - the place known for its great concert venue, delicious cuisine, and excellent beer brewed on the location.", 
+            "en": "After the talks there will be a networking party for all attendees. In order to ensure proper vibe, we chose Stary Maneż in Gdansk, known as a great concert venue, famous for delicious cuisine and excellent beer brewed locally.", 
             "pl": "Po prezentacjach odbędzie się \"networking party\" dla wszystkich uczestników konferencji. Aby zapewnić dobrą atmosferę, na miejsce spotkania wybraliśmy Stary Maneż w Gdańsku, który znany jest ze świetnej sali koncertowej, dobrej kuchni oraz wybornego, warzonego na miejscu piwa."
+        },
+        "intro.4": { 
+            "en": "So why wait? Join us!", 
+            "pl": "Nie czekaj, zapraszamy!"
         },
         "intro.link": {
             "en": "Get your ticket", 
