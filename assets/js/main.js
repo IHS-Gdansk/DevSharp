@@ -132,15 +132,20 @@ app.controller("translateCtrl",['$scope', function($scope){
             "en": "founded by",
             "pl": "pod patronatem"
         },
-        "about":{"en": "About", "pl": "O konferencji"},
+        "about.link":{"en": "About", "pl": "O Konferencji"},
+        "about":{"en": "About", "pl": "O"},
         "speakers":{"en": "Speakers", "pl": "Prelegenci"},
         "registration": {"en": "Registration", "pl": "Rejestracja"},
         "sponsors": {"en": "Sponsors", "pl": "Sponsorzy"},
         "papers": {"en": "Call for papers", "pl": "Zgłoś swoją prelekcję"},
         "contact":{"en": "Contact", "pl": "Kontakt"},
         "language":{"en": "Przelacz na polski", "pl": "Switch to English"},
+        "subtitle": {
+            "en": "Conference for Software Developers",
+            "pl": "Konferencji IT"
+        },
         "intro.1": {
-            "en": "If you are a developer looking to sharpen your skills then join us for the upcoming Dev# 2019 conference. As always it is a free* event targeted at the Tri-City IT community with the purpose of sharing knowledge and connecting with other IT professionals.", 
+            "en": "If you are a developer looking to sharpen your skills then join us for the upcoming Dev# 2019 conference. As always it is a free* event targeted at the IT community with the purpose of sharing knowledge and connecting with other professionals.", 
             "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich umiejętności to dołącz do nas podczas konferencji Dev# 2019. Tradycyjnie, jest to darmowa* impreza skierowana do społeczności profesjonalistów IT, nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
         },
         "intro.2": {
@@ -148,15 +153,19 @@ app.controller("translateCtrl",['$scope', function($scope){
             "pl": "Dev# 2019 to unikalna okazja, aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język, zarówno z naszymi wykładowcami, jak i innymi uczestnikami konferencji."
         },
         "intro.3": { 
-            "en": "After the talks there will be a networking party for all attendees. In order to ensure proper vibe, we chose Stary Maneż in Gdansk for the venue - the place known for its great concert venue, delicious cuisine, and excellent beer brewed on the location.", 
+            "en": "After the talks there will be a networking party for all attendees. In order to ensure proper vibe, we chose Stary Maneż in Gdansk, known as a great concert venue, famous for delicious cuisine and excellent beer brewed locally.", 
             "pl": "Po prezentacjach odbędzie się \"networking party\" dla wszystkich uczestników konferencji. Aby zapewnić dobrą atmosferę, na miejsce spotkania wybraliśmy Stary Maneż w Gdańsku, który znany jest ze świetnej sali koncertowej, dobrej kuchni oraz wybornego, warzonego na miejscu piwa."
+        },
+        "intro.4": { 
+            "en": "So why wait? Join us!", 
+            "pl": "Nie czekaj, zapraszamy!"
         },
         "intro.link": {
             "en": "Get your ticket", 
             "pl": "Zarejestruj się"
         },
         "intro.footer": {
-            "en": "*Entry deposit is required, it will be returned if you show up on conference.",
+            "en": "*Entry deposit is required, it will be returned if you show up at the conference.",
             "pl": "*Wymagana jest wstępna kaucja, która zostanie zwrócona gdy pojawisz się na konferencji."
         },
         "facts":{"en": "FACTS", "pl": "Fakty"},
