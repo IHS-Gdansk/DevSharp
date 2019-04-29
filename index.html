@@ -147,7 +147,7 @@
             <div class="navbar-collapse collapse navbar-rj-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="page-scroll">
-                        <a href="#who-we-are">{{translate("about")}}</a>
+                        <a href="#who-we-are">{{translate("about.link")}}</a>
                     </li>
 
                     <li class="page-scroll">
@@ -184,12 +184,12 @@
                         <a href="#footer">{{translate("contact")}}</a>
                     </li>
 
-                    <li class="language-pointer">
+                    <!-- <li class="language-pointer">
                         <a ng-click="changeLanguage()">
                             <img ng-if="isPolish()" src="assets/img/eng.png"/>
                             <img ng-if="isEnglish()" src="assets/img/pol.png"/>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
 
             </div>
@@ -208,6 +208,7 @@
                     <div class="col-md-12">
                         <div class="section-title text-center">
                             <h2 class="main-title">{{translate("about")}} <strong>Dev</strong>#</h2>
+                            <h3>{{translate("subtitle")}}</h3>
 <!--
                             <h2 class="main-title">THE CONFERENCE</h2>
 
@@ -287,6 +288,9 @@
                             <p>
                                 {{translate("intro.3")}}
                             </p>
+                            <p>
+                                {{translate("intro.4")}}
+                            </p>
                             <small class="text-muted">
                                 {{translate("intro.footer")}}
                             </small>
@@ -360,7 +364,7 @@
                         <div class="counter-item">
                             <i class="fa fa-user"></i>
                             <div class="inner-content">
-                                <span class="number" data-from="0" data-to="350" data-refresh-interval="5"></span>
+                                <span class="number" data-from="0" data-to="400" data-refresh-interval="5"></span>
                             </div>
                             <!-- //.inner-content -->
                             <p>{{translate("attendees")}}</p>
@@ -408,16 +412,148 @@
                 </div>
                 <!-- //.row -->
 
+                <!-- speaker 1 -->
+                <div class="row extra-bottom-padding">
+                    <div class="col-sm-6 col-md-3 team-item not-right-column top-column">
+                        <div class="img-rounded">
+                            <img src="assets/img/preloader.gif" data-src="assets/img/2019-speakers/BethanyHeadshot-small.jpg" alt="" class="img-responsive img-rounded"/>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-9 team-item not-right-column top-column text-justify bio-text">
+                        <h3>Bethany Baer</h3>
+                        <p>Bethany Baer joined <strong>IHS Markit Digital’s</strong> executive team in 2016 as Managing
+                            Director, Chief Technology Officer where she is using her passion for the 
+                            digital experience to unlock technology that will fundamentally change the
+                            user experience for the financial services industry. In the past year, 
+                            Bethany has completely restructured the way IHS Markit Digital works to 
+                            better serve both its employees and its clients as the leading digital 
+                            products SaaS provider and design agency in the industry.</p>
+                        <p>Bethany’s 
+                            approachable and candid leadership style matched with her fearless 
+                            pursuit to shake things up from the status quo make her an exemplary leader 
+                            and role model for women in technology. In 2017, she was named Technology 
+                            Leader of the Year by Waters Technology, WITD. Lance Uggla, chairman and 
+                            CEO at IHS Markit, remarks that “[Bethany’s] technical and business 
+                            leadership enables us to be the innovative partner our customers require 
+                            to capitalize on dynamic video, advanced personalization, conversational 
+                            user interfaces and other technologies that are redefining how financial 
+                            firms interact with their clients.”</p>
+                        <p>In total, Bethany has 20 years of 
+                            experience in technology management with the majority of her time spent in 
+                            an executive leadership role. Prior to joining IHS Markit Digital, she was 
+                            <strong>CIO for insuranceQuotes</strong> where she led Technology and Product as well as 
+                            owning the Digital Acquisition and Marketing organization responsible for 
+                            considerable growth of the business. Bethany also spent over 10 years at 
+                            <strong>Orbitz Worldwide</strong> in various leadership positions.</p>
+                    </div>
+                </div>
+                <!-- end speaker 1 -->
+
+                <!-- speaker 2 -->
+                <div class="row extra-bottom-padding">
+                    <div class="col-sm-6 col-md-3 team-item not-right-column top-column">
+                        <div class="img-rounded">
+                            <img src="assets/img/preloader.gif" data-src="assets/img/2019-speakers/mugshot-small.jpg" alt="" class="img-responsive img-rounded"/>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-9 team-item not-right-column top-column text-justify bio-text">
+                        <h3>Yan Cui</h3>
+                        <p>Yan is an experienced engineer who has run production workload at scale in <strong>AWS</strong> for 
+                            10 years. He has been an architect and principal engineer with a variety of industries 
+                            ranging from banking, e-commerce, sports streaming to mobile gaming. He has worked 
+                            extensively with AWS Lambda in production and has been helping clients around the 
+                            world adopt AWS and serverless as an independent consultant.</p>
+                        <p>Yan is an AWS Serverless Hero and a regular speaker at user groups and conferences 
+                            internationally. He is also the author of Production-Ready Serverless by Manning 
+                            and keeps an active blog at <a href="https://theburningmonk.com" target="blank"><strong>theburningmonk.com</strong></a></p>
+                    </div>
+                </div>
+                <!-- end speaker 2 -->
+
+                <!-- speaker 3 -->
+                <div class="row extra-bottom-padding">
+                    <div class="col-sm-6 col-md-3 team-item not-right-column top-column">
+                        <div class="img-rounded">
+                            <img src="assets/img/preloader.gif" data-src="assets/img/2019-speakers/Felienne-small-resized.jpg" alt="" class="img-responsive img-rounded"/>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-9 team-item not-right-column top-column text-justify bio-text">
+                        <h3>Felienne Hermans</h3>
+                        <p>Felienne is associate professor at the <a href="https://liacs.leidenuniv.nl/" target="blank"><strong>Leiden Institute of Advanced Computer Science</strong></a> 
+                            at Leiden University, where she heads the PERL research group, 
+                            focused on programming education.</p>
+                        <p>On Saturdays she teaches children 
+                            programming in a local community centre. She is one of the organizers 
+                            of the <a href="http://www.curry-on.org/2019/" target="blank"><strong>CurryOn</strong></a> conference, which aims to bridge the gap between industry 
+                            and academia. Felienne was also one of the founders of the <a href="https://joyofcoding.org/" target="blank"><strong>Joy of Coding 
+                            conference</strong></a>, with a similar goal, which she organized for 6 years. Since 
+                            2016, she has been a host at <a href="https://www.se-radio.net/" target="blank"><strong>SE radio</strong></a>, one of the most popular software 
+                            engineering podcasts on the web. When she is not coding, blogging or 
+                            teaching, she is probably knitting, running or playing a (board)game.</p>
+                        <p>Felienne blogs at <a href="https://felienne.com" target="blank"><strong>felienne.com</strong></a></p>
+                    </div>
+                </div>
+                <!-- end speaker 3 -->
+
+                <!-- speaker 4 -->
+                <div class="row extra-bottom-padding">
+                    <div class="col-sm-6 col-md-3 team-item not-right-column top-column">
+                        <div class="img-rounded">
+                            <img src="assets/img/preloader.gif" data-src="assets/img/2019-speakers/Jakub_Mrugalski-small.jpg" alt="" class="img-responsive img-rounded"/>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-9 team-item not-right-column top-column text-justify bio-text">
+                        <h3>Jakub Mrugalski</h3>
+                        <p>He has been involved in the IT security field for years. He started as a software developer working for one of the biggest polish web portal (<a href="https://www.interia.pl" target="blank"><strong>Interia.pl</strong></a>) 
+                           and then he worked in the multinational corporation Akamai, where he used his Linux management skills to protect 30% of the internet traffic.</p>
+                        <p>Now he is completely dedicated to IT security field and in <a href="https://niebezpiecznik.pl" target="blank"><strong>Niebezpiecznik.pl</strong></a> he works as a penetration tester as well as a web application security trainer. 
+                           As a computer engineer he also has a rare gift for explaining technical aspects to average computer user. 
+                           He is also a trainer and a co-author of our <string>Security Awareness</string> trainings, which are made for every computer using office worker.
+                        </p>
+                    </div>
+                </div>
+                <!-- end speaker 4 -->
+
+                <!-- speaker 5 -->
+                <div class="row extra-bottom-padding">
+                    <div class="col-sm-6 col-md-3 team-item not-right-column top-column">
+                        <div class="img-rounded">
+                            <img src="assets/img/preloader.gif" data-src="assets/img/2019-speakers/venkat-small-resized.jpg" alt="" class="img-responsive img-rounded"/>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-9 team-item not-right-column top-column text-justify bio-text">
+                        <h3>Venkat Subramaniam</h3>
+                        <p>Dr. Venkat Subramaniam is an award-winning author, founder of <strong>Agile Developer, 
+                            Inc.</strong>, creator of <a href="http://agilelearner.com" target="blank"><strong>agilelearner.com</strong></a>, and an instructional 
+                            professor at the <strong>University of Houston</strong>. He has trained and mentored thousands of software 
+                            developers in the US, Canada, Europe, and Asia, and is a regularly-invited 
+                            speaker at several international conferences. Venkat helps his clients 
+                            effectively apply and succeed with sustainable agile practices on their 
+                            software projects.</p>
+                        <p>Venkat is a (co)author of multiple technical books, 
+                            including the 2007 Jolt Productivity award winning book Practices of an 
+                            Agile Developer. You can find a list of his books at <a href="http://agiledeveloper.com"  target="blank"><strong>agiledeveloper.com</strong></a>. 
+                            You can reach him by email at <a href="mailto:venkats@agiledeveloper.com"><strong>venkats@agiledeveloper.com</strong></a> 
+                            or on twitter at <a href="https://twitter.com/@venkat_s"  target="blank"><strong>@venkat_s</strong></a>.</p>     
+                    </div>
+                </div>
+                <!-- end speaker 5 -->
+
                 <div class="row extra-bottom-padding">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="section-title text-center">
-                                <h3 class="sub-title announced-later">{{translate("agenda.toannounced")}}</h3>
-                                    </div>
-                            <!-- //.section-title -->
-                                </div>
-                        <!-- //.col-md-12 -->
+                                <h3 class="sub-title announced-later">{{translate("toannounced")}}</h3>
                             </div>
+                            <!-- //.section-title -->
+                        </div>
+                        <!-- //.col-md-12 -->
+                    </div>
                     <div class="col-sm-0 col-md-2 team-item not-right-column"></div>
 
                     <!-- //.team-item -->
@@ -481,9 +617,234 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="section-title text-center">
-                            <h3 class="sub-title announced-later">{{translate("agenda.toannounced")}}</h3>
-                        </div>                       
+                        <ul class="timeline">
+							<li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-speaker">8:00</h3>
+                                        <h3 class="timeline-title">Conference registration</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->                                    
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-speaker">9:20</h3>
+                                        <h3 class="timeline-title">Conference opening</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-speaker">9:30</h3>
+                                        <h3 class="timeline-title">Bethany Baer</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel break-after">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title-break ">10:20 | {{translate("agenda.break")}}</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-speaker">10:40 </h3>
+                                        <h3 class="timeline-title">Yan Cui</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel break-before">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title-break">11:30 | {{translate("agenda.break")}}</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-speaker">11:50</h3>                                
+                                        <h3 class="timeline-title">Felienne Hermans</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel break-after">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title-break">12:40 | Lunch</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-speaker">14:20</h3>                   
+                                        <h3 class="timeline-title">Jakub Mrugalski 
+                                            <span class="small" style="color: white">&nbsp;*talk in polish</span>
+                                        </h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel break-before">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title-break">15:10 | {{translate("agenda.break")}}</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-speaker">15:30</h3>                                  
+                                        <h3 class="timeline-title">Speaker</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li>
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel break-after">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title-break">16:20 | {{translate("agenda.break")}}</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+
+                            <li  class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-speaker">16:40</h3>       
+                                        <h3 class="timeline-title">Venkat Subramaniam</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                </div>
+                            </li>
+                        
+                            <li class="timeline-inverted">
+                                <div class="timeline-badge">
+                                    <i class="fa fa-dot-circle-o"></i>
+                                </div>
+                                <!-- //.timeline-badge -->
+
+                                <div class="timeline-panel break-before">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title-break">17:30 | Networking Party & Free beer</h3>
+                                    </div>
+                                    <!-- //.timeline-heading -->
+                                    <!-- //.timeline-body -->
+                                </div>
+                                <!-- //.timeline-panel -->
+                            </li>
+                            
+                        </ul>
+                        <!-- //End Timeline -->                  
                     </div>
                     <!-- //.col-md-12 -->
                 </div>
@@ -572,7 +933,7 @@
 
     <!-- Begin Map -->
     <div id="map" class="section">
-        <div class="section-inner">
+        <div class="section-inner extra-bottom-padding">
             <div class="container  section-content">
                 <div class="col-md-12">
                     <div class="section-title text-center">
