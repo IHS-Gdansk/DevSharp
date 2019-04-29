@@ -145,7 +145,7 @@ app.controller("translateCtrl",['$scope', function($scope){
             "pl": "Konferencji IT"
         },
         "intro.1": {
-            "en": "If you are a developer looking to sharpen your skills then join us for the upcoming Dev# 2019 conference. As always it is a free* event targeted at the IT community with the purpose of sharing knowledge and connecting with other professionals.", 
+            "en": "If you are a developer looking to sharpen your skills then join us for the upcoming Dev# 2019 conference. As always it is a free* event where Software Developers can share knowledge and connect with each other.", 
             "pl": "Jeżeli jesteś developerem i zależy ci na rozwijaniu swoich umiejętności to dołącz do nas podczas konferencji Dev# 2019. Tradycyjnie, jest to darmowa* impreza skierowana do społeczności profesjonalistów IT, nakierowana na szerzenie wiedzy oraz nawiązywanie kontaktów."
         },
         "intro.2": {
@@ -153,7 +153,7 @@ app.controller("translateCtrl",['$scope', function($scope){
             "pl": "Dev# 2019 to unikalna okazja, aby w niezobowiązującej atmosferze zdobyć wiedzę o najnowszych technologiach, znaleźć wspólny język, zarówno z naszymi wykładowcami, jak i innymi uczestnikami konferencji."
         },
         "intro.3": { 
-            "en": "After the talks there will be a networking party for all attendees. In order to ensure proper vibe, we chose Stary Maneż in Gdansk, known as a great concert venue, famous for delicious cuisine and excellent beer brewed locally.", 
+            "en": "After the talks, there will be a networking party for all attendees. In order to ensure proper vibe, we chose Stary Maneż in Gdansk, known for great concerts, delicious cuisine and excellent beer brewed locally.", 
             "pl": "Po prezentacjach odbędzie się \"networking party\" dla wszystkich uczestników konferencji. Aby zapewnić dobrą atmosferę, na miejsce spotkania wybraliśmy Stary Maneż w Gdańsku, który znany jest ze świetnej sali koncertowej, dobrej kuchni oraz wybornego, warzonego na miejscu piwa."
         },
         "intro.4": { 
