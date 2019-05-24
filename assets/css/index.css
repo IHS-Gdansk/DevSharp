@@ -12,7 +12,8 @@
 
 .map-body {
     height: 500px; 
-    width: 900px; 
+    width: 90vw;
+    max-width: 900px; 
     margin: auto;
 }
 
